@@ -1,0 +1,465 @@
+<html lang="en"><head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cloud.vmoscloud.com/assets/logo2-C8Y6sEiP.png" type="icon/image">
+    <title>Evans 🐧❤</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --gradient: linear-gradient(45deg, rgba(147, 192, 196, 0.3), rgba(223, 255, 255, 0.3));
+            --border-gradient: linear-gradient(45deg, #4a90e2, #9b59b6);
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            perspective: 1000px;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/main/evans/evans.gif')center/cover no-repeat;
+            z-index: -2;
+            animation: fadeIn 2s, backgroundFloat 20s ease-in-out infinite alternate;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes backgroundFloat {
+            0% { transform: scale(1.05) translate(-5px, -5px); }
+            100% { transform: scale(1.15) translate(5px, 5px); }
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+            backdrop-filter: blur(3px);
+        }
+        .container {
+            display: none;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        .container.visible {
+            display: block;
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transform-origin: center;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s;
+            position: relative;
+            animation: frameAnimation 1s infinite alternate;
+        }
+        @keyframes frameAnimation {
+            0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+            100% { box-shadow: 0 0 40px rgba(255, 255, 255, 1); }
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: var(--border-gradient);
+            border-radius: 22px;
+            z-index: -1;
+            animation: borderGlow 3s infinite;
+            opacity: 0.8;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left {
+            cursor: pointer; /* Change cursor to pointer for clickable area */
+        }
+        .left-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            position: relative; /* Make the logo container relative for absolute positioning of children */
+            width: 120px; /* Set a fixed width for the logo container */
+            height: 120px; /* Set a fixed height for the logo container */
+            overflow: hidden; /* Hide overflow to keep the frame and avatar within bounds */
+        }
+        .avatar-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Make the frame cover the entire logo area */
+            height: 100%; /* Make the frame cover the entire logo area */
+            object-fit: cover; /* Ensure the frame maintains its aspect ratio */
+            z-index: 2; /* Place the frame above the avatar */
+        }
+        .avatar {
+            position: absolute;
+            top: 10%; /* Adjust top position to center the avatar */
+            left: 10%; /* Adjust left position to center the avatar */
+            width: 78%; /* Make the avatar smaller than the frame */
+            height: 79%; /* Make the avatar smaller than the frame */
+            object-fit: cover; /* Ensure the avatar maintains its aspect ratio */
+            z-index: 1; /* Place the avatar below the frame */
+            border-radius: 50%; /* Make the avatar circular */
+        }
+        .status {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 15px;
+            height: 15px;
+            background: #2ecc71;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(46, 204, 113, 0.8);
+            transition: all 0.3s;
+        }
+        .info {
+            color: white;
+            margin-top: 20px;
+        }
+        .info h1 {
+            margin: 10px 0;
+            font-size: 2em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: textGlow 2s infinite alternate;
+            display: inline-flex; /* Use inline-flex to align the logo with the text */
+            align-items: center; /* Center the logo vertically */
+        }
+        .info h1 img {
+            margin-right: 10px; /* Add space between the logo and the text */
+        }
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+        }
+        .info p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUpIn 0.5s forwards;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+        @keyframes fadeUpIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        .social-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUpIn 0.5s forwards;
+            animation-delay: calc(0.5s + var(--index) * 0.1s);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .social-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .entrance {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.8s;
+        }
+        .entrance.hide {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        .entrance-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: scale(0.9);
+            animation: pulse 1.5s infinite alternate;
+        }
+        .entrance span {
+            color: white;
+            font-size: 28px;
+            margin-top: 15px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .enter-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        .snowflake {
+            color: white;
+            position: absolute;
+            top: -20px; /* Start above the viewport */
+            animation: fall linear forwards;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            z-index: -1;
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.5; box-shadow: 0 0 15px rgba(74, 144, 226, 0.5); }
+            50% { opacity: 1; box-shadow: 0 0 25px rgba(155, 89, 182, 0.8); }
+        }
+        @media (max-width: 768px) {
+            .container { width: 95%; margin: 20px auto; }
+            .glass-card { padding: 20px; }
+            .avatar { width: 60px; height: 60px; margin: -30px auto 15px; }
+            .info h1 { font-size: 1.5em; }
+            .social-links { flex-wrap: wrap; }
+            .social-btn { padding: 8px 16px; font-size: 0.9em; }
+        }
+        /* FPS Counter Styles */
+        .fps-counter {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            z-index: 1001;
+            transition: all 0.3s;
+        }
+        .fps-counter:hover {
+            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.7);
+        }
+        /* Payment Info Styles */
+        .payment-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            z-index: 1002;
+            animation: popIn 0.5s forwards;
+            max-width: 90vw;
+        }
+        @keyframes popIn {
+            from { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+            to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+        .payment-info img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+        .payment-info .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .payment-info .close-btn:hover {
+            transform: scale(1.1) rotate(90deg);
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .payment-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1001;
+            animation: fadeIn 0.3s;
+        }
+        .payment-btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, rgba(74, 144, 226, 0.7), rgba(155, 89, 182, 0.7));
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUpIn 0.5s forwards;
+            animation-delay: 0.9s;
+            font-weight: bold;
+        }
+        .payment-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+            background: linear-gradient(45deg, rgba(74, 144, 226, 0.9), rgba(155, 89, 182, 0.9));
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        /* Volume Control Styles */
+        .volume-control {
+            display: none;
+            position: fixed;
+            bottom: 70px; /* Position it above the volume button */
+            left: 20px; /* Position it below the volume button */
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1002;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition */
+            transform: translateY(20px); /* Start slightly below */
+        }
+        .volume-control.show {
+            display: block; /* Ensure it's displayed */
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Move to original position */
+        }
+        .volume-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+        }
+        .volume-btn i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <audio id="background-audio" loop="">
+        <source src="" type="audio/mp3">
+    </audio>
+    <div class="overlay"></div>
+    <div class="entrance hide" id="entrance" style="display: none;">
+        <div class="entrance-content">
+            <div class="enter-icon">→</div>
+            <span>Click to Enter</span>
+        </div>
+    </div>
+    <div class="container visible" id="main-container" style="display: block;">
+        <div class="glass-card">
+            <div class="main">
+                <div onclick="left()" class="left">
+                    <div class="left-main">
+                        <div class="logo">
+                            <img class="avatar-frame" src="https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/mirage_twilight.png" alt="Khung viền">
+                            <img class="avatar" src="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/main/vmoscloud/Evans.webp" alt="Avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <h1>
+                    <img src="https://cloud.vmoscloud.com/assets/logo2-C8Y6sEiP.png" alt="Logo" style="width: 30px; vertical-align: middle;">
+                    Evans
+                </h1>
+                <p style="--index: 1">UgPhone Official | Owner | Business Manager </p>
+                <p style="--index: 2">Join and dm me for help or partnership! : https://discord.gg/Jq3YKnkDyQ</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.vmoscloud.com/invite/vmosag702k7e" class="social-btn" style="--index: 3" target="_blank">
+                    <i class="fab fa-discord"></i> Discord
+                </a>
+                <a href="https://www.vmoscloud.com/invite/vmosag702k7e" class="social-btn" style="--index: 5" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fps-counter" id="fps">FPS: 60</div>
+    
+    <button class="volume-btn" id="toggle-volume">
+        <i class="fas fa-volume-up"></i> Volume
+    </button>
+    <div class="volume-control" id="volume-control">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+    
+    
+
+
+<div class="snowflake" style="position: absolute; left: 28.6818vw; font-size: 13.2749px; opacity: 0.494689; animation: 5.11101s linear 0s 1 normal forwards running fall;">❤</div><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 40.7224vw; width: 28.2606px; opacity: 0.589066; animation: 5.57758s linear 0s 1 normal forwards running fall;"><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 40.2527vw; width: 28.3404px; opacity: 0.657524; animation: 9.95587s linear 0s 1 normal forwards running fall;"><div class="snowflake" style="position: absolute; left: 74.0457vw; font-size: 26.8654px; opacity: 0.316853; animation: 8.8699s linear 0s 1 normal forwards running fall;">💖</div><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 44.1093vw; width: 13.5478px; opacity: 0.400362; animation: 5.76857s linear 0s 1 normal forwards running fall;"><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 19.1386vw; width: 10.3759px; opacity: 0.917631; animation: 8.22178s linear 0s 1 normal forwards running fall;"><div class="snowflake" style="position: absolute; left: 12.6955vw; font-size: 15.1686px; opacity: 0.659172; animation: 8.7905s linear 0s 1 normal forwards running fall;">✧</div><div class="snowflake" style="position: absolute; left: 50.9669vw; font-size: 29.3999px; opacity: 0.495325; animation: 7.26225s linear 0s 1 normal forwards running fall;">❄</div><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 98.066vw; width: 23.8312px; opacity: 0.703887; animation: 9.0507s linear 0s 1 normal forwards running fall;"><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 12.7843vw; width: 12.0646px; opacity: 0.600787; animation: 6.7756s linear 0s 1 normal forwards running fall;"><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 9.31907vw; width: 22.5734px; opacity: 0.36521; animation: 5.53999s linear 0s 1 normal forwards running fall;"><div class="snowflake" style="position: absolute; left: 42.3649vw; font-size: 15.4215px; opacity: 0.706618; animation: 8.773s linear 0s 1 normal forwards running fall;">❄</div><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 83.0709vw; width: 19.4775px; opacity: 0.565975; animation: 6.71146s linear 0s 1 normal forwards running fall;"><div class="snowflake" style="position: absolute; left: 89.7849vw; font-size: 10.7473px; opacity: 0.981267; animation: 7.59919s linear 0s 1 normal forwards running fall;">❅</div><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 39.0211vw; width: 14.5831px; opacity: 0.96419; animation: 9.80804s linear 0s 1 normal forwards running fall;"><img src="https://www.ugphone.com/toc-portal/logo.png" class="snowflake" style="position: absolute; left: 12.9268vw; width: 26.3133px; opacity: 0.810173; animation: 8.79865s linear 0s 1 normal forwards running fall;"><div class="snowflake" style="position: absolute; left: 35.8775vw; font-size: 22.881px; opacity: 0.628278; animation: 7.29702s linear 0s 1 normal forwards running fall;">❅</div></body></html>
