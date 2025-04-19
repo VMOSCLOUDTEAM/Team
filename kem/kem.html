@@ -1,28 +1,149 @@
 <html lang="en"><head>
 
-    
-<video id="myVideo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1001;" autoplay muted loop>
-    <source src="https://raw.githubusercontent.com/VMOSCLOUDTEAM/Team/refs/heads/master/kem/kemz.mp4" type="video/mp4">
-    Trình duyệt của bạn không hỗ trợ video.
-</video>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W-Azure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<script>
-    const entrance = document.querySelector('.entrance');
-    const container = document.querySelector('.container');
-    const video = document.getElementById('myVideo');
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            overflow: hidden;
+        }
 
-    entrance.addEventListener('click', () => {
-        // Ẩn giao diện "entrance"
-        entrance.classList.add('hide');
+        .entrance {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: slideIn 1s ease-out forwards;
+            z-index: 10;
+        }
 
-        // Hiện container
-        container.classList.add('visible');
+        .entrance h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-        // Hiện và phát video
-        video.style.display = 'block';
-        video.play();
-    });
-</script>
+        .entrance button {
+            background-color: #facc15;
+            color: #1e293b;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .entrance button:hover {
+            background-color: #eab308;
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .hide {
+            animation: slideOut 0.8s forwards;
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+
+        .container {
+            display: none;
+            animation: fadeIn 1s forwards;
+            padding: 2rem;
+        }
+
+        .container.visible {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .welcome-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="entrance">
+        <h1>Hello</h1>
+        <button id="enterBtn">Vào</button>
+    </div>
+
+    <div class="container">
+        <div class="welcome-text">Đã sẵn sàng?</div>
+        <div class="description">
+            Hãy bắt đầu hành trình của mình!
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const entrance = document.querySelector('.entrance');
+            const container = document.querySelector('.container');
+            const button = document.getElementById('enterBtn');
+
+            button.addEventListener('click', function () {
+                entrance.classList.add('hide');
+                setTimeout(() => {
+                    entrance.style.display = 'none';
+                    container.classList.add('visible');
+                }, 800);
+            });
+        });
+    </script>
+
+</body>
+</html>
 
 
     <meta charset="UTF-8">
