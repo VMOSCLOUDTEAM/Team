@@ -8,7 +8,9 @@
     <meta name="keywords" content="Kem, VMOS Cloud, Developer, Designer, Portfolio, Web Development, Frontend, Backend, UI, UX, React, Vue, Nodejs, Hanoi, Vietnam">
     <meta property="og:title" content="Kem 🐧 | VMOS Cloud - Developer Portfolio">
     <meta property="og:description" content="Professional Portfolio of Kem | Developer & Designer at VMOS Cloud">
-    <meta property="og:image" content="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp"> <meta property="og:url" content="https://kemdev.com"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp">
+    <meta property="og:url" content="https://kemdev.com">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="https://i.ibb.co/DgR2Cr7j/snapedit-1743818950330.png" type="image/png">
     <title>Kem 🐧 | VMOS Cloud - Portfolio</title>
@@ -16,9 +18,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net"> <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"> <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" as="script"> <link rel="preload" href="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp" as="image">
     <link rel="preload" href="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.gif" as="image">
 
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
@@ -27,35 +32,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <style>
-        /* ==========================================================================
-           1. VARIABLES & GLOBALS
-           ========================================================================== */
         :root {
-            /* Color Palette */
             --primary: #5865F2;
             --primary-dark: #4752C4;
             --secondary: #FACC15;
             --secondary-dark: #EAB308;
             --success: #3BA55C;
             --danger: #ED4245;
-            --warning: #f97316; /* Added */
-            --info: #3abff8; /* Added */
-            --dark: #0F172A; /* Main background */
-            --dark-medium: #1E293B; /* Card backgrounds, slightly lighter */
-            --darker: #020617; /* Very dark elements, footer */
-            --light: #F1F5F9; /* Main text color */
-            --light-medium: #cbd5e1; /* Lighter text, placeholders */
-            --muted: #94A3B8; /* Subtitles, secondary text */
-            --dark-muted: #475569; /* Borders, disabled elements */
-            --border-color: rgba(148, 163, 184, 0.2); /* Standard border */
+            --warning: #f97316;
+            --info: #3abff8;
+            --dark: #0F172A;
+            --dark-medium: #1E293B;
+            --darker: #020617;
+            --light: #F1F5F9;
+            --light-medium: #cbd5e1;
+            --muted: #94A3B8;
+            --dark-muted: #475569;
+            --border-color: rgba(148, 163, 184, 0.2);
 
-            /* Gradients */
             --gradient-primary: linear-gradient(135deg, #5865F2, #9B59B6);
             --gradient-secondary: linear-gradient(135deg, #FACC15, #F97316);
             --gradient-dark: linear-gradient(135deg, #0F172A, #1E293B);
-            --gradient-border: linear-gradient(90deg, var(--primary), var(--secondary)); /* For borders */
+            --gradient-border: linear-gradient(90deg, var(--primary), var(--secondary));
 
-            /* Shadows */
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
@@ -64,30 +63,26 @@
             --shadow-primary: 0 0 15px rgba(88, 101, 242, 0.4);
             --shadow-secondary: 0 0 15px rgba(250, 204, 21, 0.4);
 
-            /* Transitions */
             --transition-fast: all 0.2s ease;
             --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-            /* Spacing */
-            --space-xxs: 0.125rem; /* 2px */
-            --space-xs: 0.25rem;  /* 4px */
-            --space-sm: 0.5rem;   /* 8px */
-            --space-md: 1rem;     /* 16px */
-            --space-lg: 1.5rem;   /* 24px */
-            --space-xl: 2rem;     /* 32px */
-            --space-2xl: 3rem;    /* 48px */
-            --space-3xl: 4rem;    /* 64px */
-            --space-4xl: 6rem;    /* 96px */
+            --space-xxs: 0.125rem;
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
 
-            /* Border Radius */
             --rounded-sm: 0.25rem;
             --rounded-md: 0.5rem;
             --rounded-lg: 0.75rem;
             --rounded-xl: 1rem;
             --rounded-full: 9999px;
 
-            /* Typography */
             --text-xs: 0.75rem;
             --text-sm: 0.875rem;
             --text-base: 1rem;
@@ -99,7 +94,6 @@
             --text-5xl: 3rem;
             --text-6xl: 3.75rem;
 
-            /* Z-Indexes */
             --z-back: -1;
             --z-base: 1;
             --z-content: 10;
@@ -107,12 +101,21 @@
             --z-mobile-menu: 1001;
             --z-back-to-top: 900;
             --z-preloader: 9999;
+            --z-modal: 10000;
         }
 
-        /* Basic Reset & Global Styles */
-        *,
-        *::before,
-        *::after {
+        body.light-mode {
+            --dark: #F1F5F9;
+            --light: #0F172A;
+            --dark-medium: #e2e8f0;
+            --darker: #cbd5e1;
+            --light-medium: #334155;
+            --muted: #64748b;
+            --dark-muted: #94a3b8;
+            --border-color: rgba(15, 23, 42, 0.2);
+        }
+
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -121,33 +124,28 @@
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
-            font-size: 16px; /* Base font size */
+            font-size: 16px;
         }
 
         body {
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: var(--light);
             background-color: var(--dark);
-            line-height: 1.7; /* Improved line height */
+            line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            opacity: 0; /* Start hidden for fade-in */
+            opacity: 0;
             transition: opacity 0.6s ease-in-out;
         }
-        body.loaded {
-            opacity: 1; /* Fade in when JS adds this class */
-        }
+        body.loaded { opacity: 1; }
 
-
-        /* Accessibility: Focus Visible */
         :focus-visible {
             outline: 3px solid var(--primary);
             outline-offset: 2px;
             border-radius: var(--rounded-sm);
         }
 
-        /* General Elements */
         img, video {
             max-width: 100%;
             height: auto;
@@ -161,7 +159,7 @@
         }
         a:hover {
             color: var(--secondary);
-            text-decoration: underline; /* Optional: Add underline on hover */
+            text-decoration: underline;
         }
 
         button {
@@ -171,51 +169,44 @@
             font-family: inherit;
             transition: var(--transition-fast);
             color: inherit;
-            padding: 0; /* Reset padding */
+            padding: 0;
         }
 
         h1, h2, h3, h4, h5, h6 {
             line-height: 1.3;
-            font-weight: 600; /* Default bold */
+            font-weight: 600;
             margin-bottom: var(--space-md);
         }
 
         p {
             margin-bottom: var(--space-md);
-            color: var(--muted); /* Default paragraph color */
-            max-width: 70ch; /* Improve readability */
+            color: var(--muted);
+            max-width: 70ch;
         }
-        p:last-child {
-            margin-bottom: 0;
-        }
+        p:last-child { margin-bottom: 0; }
 
-        ul, ol {
-            list-style: none; /* Remove default list style */
-        }
+        ul, ol { list-style: none; }
 
-        /* Container */
         .container {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 var(--space-lg); /* More padding on larger screens */
+            padding: 0 var(--space-lg);
         }
 
-        /* Gradient Text Utility */
         .gradient-text {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-block; /* Needed for background-clip */
+            display: inline-block;
         }
 
-        /* Button Styles */
         .btn {
             padding: var(--space-sm) var(--space-lg);
             border-radius: var(--rounded-lg);
             font-weight: 600;
-            font-size: var(--text-sm); /* Slightly smaller base button size */
+            font-size: var(--text-sm);
             transition: var(--transition-normal);
             display: inline-flex;
             align-items: center;
@@ -223,23 +214,23 @@
             gap: var(--space-sm);
             cursor: pointer;
             border: 1px solid transparent;
-            text-transform: uppercase; /* Optional: Uppercase buttons */
-            letter-spacing: 0.5px; /* Optional: Slight letter spacing */
-            white-space: nowrap; /* Prevent wrapping */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .btn i {
             transition: transform 0.3s ease;
-            font-size: 1em; /* Make icon size relative */
+            font-size: 1em;
         }
 
-        .btn:hover i:not(.fa-github):not(.fa-discord) { /* Exclude specific icons if needed */
+        .btn:hover i:not(.fa-github):not(.fa-discord) {
             transform: translateX(3px);
         }
 
         .btn-primary {
             background: var(--gradient-primary);
-            background-size: 200% auto; /* For hover effect */
+            background-size: 200% auto;
             color: white;
             box-shadow: var(--shadow-primary);
             border: none;
@@ -248,7 +239,7 @@
         .btn-primary:hover, .btn-primary:focus {
             transform: translateY(-3px) scale(1.03);
             box-shadow: 0 10px 20px rgba(88, 101, 242, 0.5);
-            background-position: right center; /* Change gradient direction */
+            background-position: right center;
         }
 
         .btn-secondary {
@@ -269,10 +260,6 @@
             font-size: var(--text-xs);
         }
 
-
-        /* ==========================================================================
-           2. BACKGROUND & PARTICLES
-           ========================================================================== */
         .background {
             position: fixed;
             top: 0;
@@ -281,7 +268,7 @@
             height: 100%;
             background: url('https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.gif') center/cover no-repeat;
             z-index: var(--z-back);
-            animation: subtleZoom 40s ease-in-out infinite alternate; /* Changed animation */
+            animation: subtleZoom 40s ease-in-out infinite alternate;
         }
 
         .overlay {
@@ -290,8 +277,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 23, 42, 0.7); /* Slightly increased opacity */
-            backdrop-filter: blur(4px); /* Slightly increased blur */
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px);
             z-index: var(--z-back);
         }
 
@@ -301,16 +288,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: calc(var(--z-back) + 1); /* Just above overlay */
+            z-index: calc(var(--z-back) + 1);
             pointer-events: none;
         }
 
         .particle {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1); /* More subtle */
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             pointer-events: none;
-            animation: floatParticle 15s infinite linear alternate; /* Changed name */
+            animation: floatParticle 15s infinite linear alternate;
         }
 
         @keyframes subtleZoom {
@@ -324,10 +311,6 @@
             100% { transform: translateY(0) translateX(0); opacity: 0.1; }
         }
 
-
-        /* ==========================================================================
-           3. PRELOADER
-           ========================================================================== */
         .preloader {
             position: fixed;
             top: 0;
@@ -358,8 +341,8 @@
         }
 
         .progress-container {
-            width: 250px; /* Wider */
-            height: 6px; /* Thicker */
+            width: 250px;
+            height: 6px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: var(--rounded-full);
             overflow: hidden;
@@ -369,7 +352,7 @@
             height: 100%;
             width: 0;
             background: var(--gradient-secondary);
-            transition: width 1.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother easing */
+            transition: width 1.8s cubic-bezier(0.25, 0.1, 0.25, 1);
             border-radius: var(--rounded-full);
         }
 
@@ -378,10 +361,6 @@
             100% { transform: scale(1.05); opacity: 1; }
         }
 
-
-        /* ==========================================================================
-           4. HEADER & NAVIGATION
-           ========================================================================== */
         .header {
             position: fixed;
             top: 0;
@@ -414,24 +393,19 @@
             align-items: center;
             gap: var(--space-sm);
             font-size: var(--text-xl);
-            font-weight: 700; /* Bolder logo */
-            color: var(--light) !important; /* Ensure color */
-            text-decoration: none !important; /* Ensure no underline */
+            font-weight: 700;
+            color: var(--light) !important;
+            text-decoration: none !important;
         }
-        .logo:hover {
-            color: var(--light) !important; /* Prevent color change on hover */
-        }
+        .logo:hover { color: var(--light) !important; }
 
         .logo-img {
-            width: 36px; /* Slightly larger */
+            width: 36px;
             height: 36px;
             transition: transform 0.3s ease;
         }
-        .logo:hover .logo-img {
-            transform: rotate(-10deg); /* Fun hover effect */
-        }
+        .logo:hover .logo-img { transform: rotate(-10deg); }
 
-        /* Desktop Navigation Links */
         .nav-links {
             display: flex;
             gap: var(--space-xl);
@@ -451,88 +425,96 @@
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -2px; /* Slightly lower */
+            bottom: -2px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--gradient-primary); /* Use gradient */
+            background: var(--gradient-primary);
             transition: width 0.3s ease;
         }
 
-        .nav-link:hover,
-        .nav-link.active {
+        .nav-link:hover, .nav-link.active {
             color: var(--light);
         }
 
-        .nav-link:hover::after,
-        .nav-link.active::after {
+        .nav-link:hover::after, .nav-link.active::after {
             width: 100%;
         }
 
-        /* Mobile Menu Button */
         .mobile-menu-btn {
-            display: none; /* Hidden by default */
+            display: none;
             font-size: var(--text-2xl);
-            z-index: var(--z-mobile-menu); /* Above nav links when open */
-            padding: var(--space-xs); /* Easier to tap */
+            z-index: var(--z-mobile-menu);
+            padding: var(--space-xs);
         }
 
-        /* Mobile Navigation (Initially hidden, toggled by JS) */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: var(--text-xl);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .theme-toggle:hover { color: var(--primary); }
+
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
                 top: 0;
-                right: -100%; /* Start off-screen */
+                right: -100%;
                 width: 70%;
-                max-width: 300px; /* Max width */
+                max-width: 300px;
                 height: 100vh;
-                background: rgba(15, 23, 42, 0.98); /* More opaque */
+                background: rgba(15, 23, 42, 0.98);
                 backdrop-filter: blur(15px);
                 flex-direction: column;
-                justify-content: center; /* Center items vertically */
-                align-items: center; /* Center items horizontally */
-                gap: var(--space-xl); /* Increased gap */
-                transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smoother slide */
+                justify-content: center;
+                align-items: center;
+                gap: var(--space-xl);
+                transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
                 z-index: calc(var(--z-header) + 1);
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
                 border-left: 1px solid var(--border-color);
-                padding-top: var(--space-4xl); /* Push links down */
+                padding-top: var(--space-4xl);
             }
 
-            .nav-links.active {
-                right: 0; /* Slide in */
-            }
+            .nav-links.active { right: 0; }
 
             .nav-link {
-                font-size: var(--text-lg); /* Larger font for mobile */
-                color: var(--light); /* White links on mobile */
+                font-size: var(--text-lg);
+                color: var(--light);
                 padding: var(--space-sm) var(--space-xl);
                 width: 100%;
                 text-align: center;
             }
-            .nav-link::after { /* Different active indicator for mobile */
-                display: none; /* Hide underline */
-            }
+            .nav-link::after { display: none; }
             .nav-link.active {
                 background: var(--gradient-primary);
                 border-radius: var(--rounded-md);
                 color: white;
             }
 
-            .mobile-menu-btn {
-                display: block; /* Show button on mobile */
-            }
+            .mobile-menu-btn { display: block; }
         }
 
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: var(--primary);
+            z-index: 10001;
+            transition: width 0.3s ease;
+        }
 
-        /* ==========================================================================
-           5. HERO SECTION
-           ========================================================================== */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 120px; /* Increased padding */
+            padding-top: 120px;
             padding-bottom: var(--space-3xl);
             position: relative;
             overflow: hidden;
@@ -544,11 +526,11 @@
         }
 
         .hero-title {
-            font-size: clamp(var(--text-4xl), 7vw, var(--text-6xl)); /* Larger clamp */
+            font-size: clamp(var(--text-4xl), 7vw, var(--text-6xl));
             font-weight: 700;
-            margin-bottom: var(--space-sm); /* Reduced margin */
-            line-height: 1.15; /* Tighter line height */
-            letter-spacing: -1px; /* Tighter letter spacing */
+            margin-bottom: var(--space-sm);
+            line-height: 1.15;
+            letter-spacing: -1px;
         }
 
         .hero-subtitle {
@@ -562,53 +544,47 @@
             margin-bottom: var(--space-xl);
             font-size: var(--text-base);
             max-width: 550px;
-            color: var(--light-medium); /* Slightly lighter than muted */
+            color: var(--light-medium);
         }
 
         .hero-btns {
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping on small screens */
+            flex-wrap: wrap;
             gap: var(--space-md);
             margin-top: var(--space-xl);
         }
 
-        /* Typing Animation */
-        .typing-container { /* Optional: Wrap typing text for more control */
-            display: inline-block;
-        }
+        .typing-container { display: inline-block; }
         .typing-text {
             display: inline-block;
             overflow: hidden;
-            border-right: 0.15em solid var(--primary); /* Cursor */
+            border-right: 0.15em solid var(--primary);
             white-space: nowrap;
             margin: 0 auto;
-            letter-spacing: 0.1em; /* Adjust as needed */
-            animation:
-                typing 3.5s steps(30, end) forwards, /* Added forwards to keep text visible */
-                blink-caret .75s step-end infinite;
+            letter-spacing: 0.1em;
+            animation: typing 3.5s steps(30, end) forwards, blink-caret .75s step-end infinite;
         }
 
         @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+            from { width: 0; }
+            to { width: 100%; }
         }
         @keyframes blink-caret {
-            from, to { border-color: transparent }
+            from, to { border-color: transparent; }
             50% { border-color: var(--primary); }
         }
 
-        /* Hero Image */
         .hero-image {
             position: absolute;
-            right: 5%; /* Positioned relative */
-            bottom: 0; /* Align to bottom */
-            width: clamp(300px, 35vw, 550px); /* Responsive width */
-            max-height: 80vh; /* Limit height */
+            right: 5%;
+            bottom: 0;
+            width: clamp(300px, 35vw, 550px);
+            max-height: 80vh;
             z-index: var(--z-base);
-            opacity: 0.8; /* Slightly transparent */
+            opacity: 0.8;
             animation: floatHero 8s ease-in-out infinite alternate;
-            object-fit: contain; /* Ensure image is not distorted */
-            pointer-events: none; /* Prevent interaction */
+            object-fit: contain;
+            pointer-events: none;
         }
 
         @keyframes floatHero {
@@ -617,67 +593,40 @@
             100% { transform: translateY(0); }
         }
 
-        /* Hide hero image on smaller screens */
         @media (max-width: 992px) {
-            .hero-image {
-                opacity: 0.3;
-                right: -5%;
-            }
+            .hero-image { opacity: 0.3; right: -5%; }
         }
         @media (max-width: 768px) {
-            .hero {
-                text-align: center; /* Center text on mobile */
-                padding-top: 100px;
-            }
-            .hero-content {
-                margin: 0 auto; /* Center content block */
-            }
-            .hero-image {
-                display: none; /* Hide image completely */
-            }
-            .hero-btns {
-                justify-content: center; /* Center buttons */
-            }
-             .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
+            .hero { text-align: center; padding-top: 100px; }
+            .hero-content { margin: 0 auto; }
+            .hero-image { display: none; }
+            .hero-btns { justify-content: center; }
+            .hero p { margin-left: auto; margin-right: auto; }
         }
         @media (max-width: 480px) {
-            .hero-btns {
-                flex-direction: column; /* Stack buttons */
-                align-items: center;
-            }
-            .hero-btns .btn {
-                width: 80%; /* Make buttons wider */
-                max-width: 300px;
-            }
+            .hero-btns { flex-direction: column; align-items: center; }
+            .hero-btns .btn { width: 80%; max-width: 300px; }
         }
 
-        /* ==========================================================================
-           6. SECTIONS (General Styling)
-           ========================================================================== */
         .section {
             padding: var(--space-3xl) 0;
             position: relative;
-            overflow: hidden; /* Hide overflowing animations */
+            overflow: hidden;
         }
-        .section:nth-of-type(even) { /* Alternate background slightly */
-            background-color: rgba(15, 23, 42, 0.5); /* Slightly different from body */
-        }
+        .section:nth-of-type(even) { background-color: rgba(15, 23, 42, 0.5); }
 
         .section-title {
             font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
             font-weight: 700;
-            margin-bottom: var(--space-3xl); /* Increased margin */
+            margin-bottom: var(--space-3xl);
             text-align: center;
             position: relative;
             display: block;
         }
-        .section-title::after { /* Title underline */
+        .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px; /* Lower position */
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
@@ -687,7 +636,6 @@
             opacity: 0.8;
         }
 
-        /* Animation Utility for Sections */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -697,21 +645,15 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Add staggered delays */
         .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
         .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
         .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
-        /* Reset for direct children of different parents if needed */
 
-
-        /* ==========================================================================
-           7. ABOUT SECTION
-           ========================================================================== */
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: var(--space-2xl);
-            align-items: center; /* Vertically align items */
+            align-items: center;
         }
 
         .about-image-wrapper {
@@ -719,10 +661,10 @@
             border-radius: var(--rounded-xl);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            max-width: 450px; /* Limit image size */
-            margin: 0 auto; /* Center image if grid column is wider */
+            max-width: 450px;
+            margin: 0 auto;
         }
-        .about-image-wrapper::before { /* Gradient overlay */
+        .about-image-wrapper::before {
             content: '';
             position: absolute;
             inset: 0;
@@ -735,9 +677,7 @@
             width: 100%;
             transition: transform 0.5s ease;
         }
-        .about-image-wrapper:hover .about-image {
-            transform: scale(1.05); /* Subtle zoom on hover */
-        }
+        .about-image-wrapper:hover .about-image { transform: scale(1.05); }
 
         .about-text h3 {
             font-size: var(--text-2xl);
@@ -747,9 +687,7 @@
             gap: var(--space-sm);
             color: var(--light);
         }
-        .about-text h3 i {
-            color: var(--primary);
-        }
+        .about-text h3 i { color: var(--primary); }
 
         .about-text p {
             color: var(--light-medium);
@@ -765,48 +703,42 @@
             gap: var(--space-sm);
             color: var(--light);
         }
-        .skills-title i {
-            color: var(--secondary);
-        }
+        .skills-title i { color: var(--secondary); }
 
         .skills {
             display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
+            flex-direction: column;
+            gap: var(--space-md);
         }
 
         .skill {
-            background: var(--dark-medium);
-            padding: var(--space-xs) var(--space-md);
-            border-radius: var(--rounded-full);
-            font-size: var(--text-sm);
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: var(--space-xs);
-            border: 1px solid var(--border-color);
-            transition: var(--transition-fast);
-            color: var(--muted);
-        }
-        .skill:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
-        .skill i {
-            color: var(--secondary); /* Icon color */
-            font-size: 0.9em;
-            transition: color 0.2s ease;
-        }
-        .skill:hover i {
-            color: white; /* Icon color on hover */
+            gap: var(--space-md);
         }
 
-        /* ==========================================================================
-           8. STATS SECTION
-           ========================================================================== */
+        .skill-name {
+            flex: 0 0 120px;
+            font-weight: 500;
+            color: var(--light);
+        }
+
+        .skill-bar {
+            flex: 1;
+            background: var(--dark-muted);
+            height: 8px;
+            border-radius: var(--rounded-full);
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: var(--primary);
+            transition: width 1s ease-in-out;
+        }
+
         .stats-section {
-            background: var(--gradient-dark); /* Use gradient background */
+            background: var(--gradient-dark);
             color: var(--light);
             padding: var(--space-3xl) 0;
         }
@@ -819,7 +751,7 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.05); /* Subtle background */
+            background: rgba(255, 255, 255, 0.05);
             padding: var(--space-xl) var(--space-lg);
             border-radius: var(--rounded-lg);
             border: 1px solid var(--border-color);
@@ -836,7 +768,7 @@
             font-size: var(--text-3xl);
             color: var(--primary);
             margin-bottom: var(--space-md);
-            display: block; /* Center icon */
+            display: block;
             margin-left: auto;
             margin-right: auto;
         }
@@ -844,7 +776,7 @@
         .stat-number {
             font-size: var(--text-4xl);
             font-weight: 700;
-            color: var(--secondary); /* Highlight number */
+            color: var(--secondary);
             margin-bottom: var(--space-xs);
             line-height: 1;
         }
@@ -854,10 +786,6 @@
             color: var(--muted);
         }
 
-        /* ==========================================================================
-           9. PROJECTS SECTION
-           ========================================================================== */
-        /* Project Filters */
         .project-filters {
             display: flex;
             justify-content: center;
@@ -889,10 +817,9 @@
             font-weight: 600;
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Responsive columns */
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: var(--space-xl);
         }
 
@@ -903,35 +830,32 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack image and content */
-            opacity: 1; /* Base opacity for filtering */
-            transition: opacity 0.4s ease, transform 0.4s ease, height 0.4s ease, margin 0.4s ease, padding 0.4s ease, border 0.4s ease; /* Added transitions for filtering */
-            height: auto; /* Base height for filtering */
+            display: flex;
+            flex-direction: column;
+            opacity: 1;
+            transition: opacity 0.4s ease, transform 0.4s ease, height 0.4s ease, margin 0.4s ease, padding 0.4s ease, border 0.4s ease;
+            height: auto;
+            cursor: pointer;
         }
 
-        .project-card.hide { /* Class added by JS for filtering */
+        .project-card.hide {
             opacity: 0;
             transform: scale(0.9);
-            height: 0 !important; /* Use important to override default height if needed */
+            height: 0 !important;
             margin: 0 !important;
             padding: 0 !important;
             overflow: hidden !important;
             border: none !important;
-            /* Explicitly set related properties to 0 */
-             padding-top: 0 !important;
-             padding-bottom: 0 !important;
-             margin-top: 0 !important;
-             margin-bottom: 0 !important;
-             border-width: 0 !important;
-             /* Delay hiding visually */
-             /* visibility: hidden; */
-             /* transition-delay: 0s, 0s, 0.4s, 0.4s, 0.4s, 0.4s; */
-             pointer-events: none; /* Prevent interaction when hidden */
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            border-width: 0 !important;
+            pointer-events: none;
         }
 
         .project-card:hover {
-            transform: translateY(-8px) scale(1.02); /* More pronounced hover */
+            transform: translateY(-8px) scale(1.02);
             box-shadow: var(--shadow-xl);
             border-color: rgba(148, 163, 184, 0.5);
         }
@@ -939,26 +863,23 @@
         .project-image-container {
             position: relative;
             overflow: hidden;
-            height: 220px; /* Fixed height for image container */
-            background-color: var(--dark-muted); /* Placeholder color */
+            height: 220px;
+            background-color: var(--dark-muted);
         }
         .project-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Cover the container */
+            object-fit: cover;
             transition: transform 0.4s ease;
         }
-        .project-card:hover .project-image {
-            transform: scale(1.1); /* Zoom image on hover */
-        }
+        .project-card:hover .project-image { transform: scale(1.1); }
 
         .project-content {
             padding: var(--space-lg);
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* Allow content to grow */
-            /* Added min-height to prevent collapse when card is hiding */
-            min-height: 150px; /* Adjust as needed based on content */
+            flex-grow: 1;
+            min-height: 150px;
         }
 
         .project-title {
@@ -971,7 +892,7 @@
             color: var(--muted);
             margin-bottom: var(--space-md);
             font-size: var(--text-sm);
-            flex-grow: 1; /* Push tags/links down */
+            flex-grow: 1;
         }
 
         .project-tags {
@@ -992,28 +913,105 @@
         .project-links {
             display: flex;
             gap: var(--space-sm);
-            margin-top: auto; /* Push links to the bottom */
+            margin-top: auto;
         }
 
         .project-links .btn {
-            flex-grow: 1; /* Make buttons take equal space */
+            flex-grow: 1;
             text-align: center;
         }
 
-
-        /* ==========================================================================
-           10. TESTIMONIALS SECTION
-           ========================================================================== */
-        .testimonials-section {
-            background: var(--dark); /* Different background */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: var(--z-modal);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        /* Swiper Slider Styles */
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--dark-medium);
+            padding: var(--space-xl);
+            border-radius: var(--rounded-lg);
+            max-width: 700px;
+            width: 90%;
+            position: relative;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: none;
+            border: none;
+            font-size: var(--text-2xl);
+            color: var(--light);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover { color: var(--primary); }
+
+        .modal-image {
+            width: 100%;
+            border-radius: var(--rounded-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .modal-title {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-md);
+        }
+
+        .modal-description {
+            font-size: var(--text-base);
+            color: var(--light-medium);
+            margin-bottom: var(--space-lg);
+        }
+
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .modal-tag {
+            background: var(--primary);
+            color: white;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--rounded-full);
+            font-size: var(--text-sm);
+        }
+
+        .modal-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .modal-links .btn { flex: 1; }
+
+        .testimonials-section { background: var(--dark); }
+
         .testimonials-slider {
             width: 100%;
-            max-width: 800px; /* Limit width */
+            max-width: 800px;
             margin: 0 auto;
-            padding: var(--space-md) 0 var(--space-3xl); /* Add padding for navigation */
+            padding: var(--space-md) 0 var(--space-3xl);
             position: relative;
         }
 
@@ -1021,12 +1019,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: var(--space-md); /* Padding around slide content */
-            /* Ensure slides are visible during transition */
-             backface-visibility: hidden;
-             transform: translateZ(0);
-             -webkit-backface-visibility: hidden;
-             -webkit-transform: translateZ(0);
+            padding: var(--space-md);
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0);
         }
 
         .testimonial-card {
@@ -1036,10 +1033,9 @@
             border: 1px solid var(--border-color);
             text-align: center;
             width: 100%;
-            max-width: 600px; /* Max width of card */
+            max-width: 600px;
             box-shadow: var(--shadow-lg);
             position: relative;
-            /* margin: var(--space-md); Removed margin as padding added to swiper-slide */
         }
 
         .testimonial-author-img {
@@ -1050,15 +1046,13 @@
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translate(-50%, -50%); /* Center overlap */
+            transform: translate(-50%, -50%);
             z-index: 1;
             box-shadow: var(--shadow-md);
-            object-fit: cover; /* Ensure image covers area */
+            object-fit: cover;
         }
 
-        .testimonial-content {
-            padding-top: 50px; /* Space for overlapping image */
-        }
+        .testimonial-content { padding-top: 50px; }
 
         .testimonial-text {
             font-size: var(--text-base);
@@ -1068,7 +1062,7 @@
             position: relative;
             padding: 0 var(--space-lg);
         }
-        .testimonial-text::before { /* Optional quote marks */
+        .testimonial-text::before {
             content: '“';
             position: absolute;
             top: -10px;
@@ -1078,9 +1072,7 @@
             opacity: 0.3;
         }
 
-        .testimonial-author {
-            margin-top: var(--space-md);
-        }
+        .testimonial-author { margin-top: var(--space-md); }
 
         .testimonial-author h4 {
             font-size: var(--text-lg);
@@ -1102,69 +1094,57 @@
             opacity: 0.2;
         }
 
-        /* Swiper Navigation/Pagination Styling */
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: var(--primary) !important; /* Important to override default */
+        .swiper-button-prev, .swiper-button-next {
+            color: var(--primary) !important;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            width: 44px !important; /* Custom size */
+            width: 44px !important;
             height: 44px !important;
             transition: background-color 0.3s ease;
-             top: 50% !important; /* Ensure vertical centering */
-             transform: translateY(-50%) !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
         }
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
+        .swiper-button-prev:hover, .swiper-button-next:hover {
             background-color: rgba(88, 101, 242, 0.3);
         }
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-            font-size: var(--text-lg) !important; /* Custom icon size */
+        .swiper-button-prev::after, .swiper-button-next::after {
+            font-size: var(--text-lg) !important;
         }
 
-        /* Position arrows outside the container slightly */
         .swiper-button-prev { left: -10px !important; }
         .swiper-button-next { right: -10px !important; }
-        @media (max-width: 900px) { /* Move arrows inside on smaller screens */
+        @media (max-width: 900px) {
             .swiper-button-prev { left: 5px !important; }
             .swiper-button-next { right: 5px !important; }
         }
-        @media (max-width: 500px) { /* Hide arrows on very small screens */
-             .swiper-button-prev, .swiper-button-next {
-                  display: none !important;
-             }
+        @media (max-width: 500px) {
+            .swiper-button-prev, .swiper-button-next { display: none !important; }
         }
 
-
         .swiper-pagination {
-            position: static !important; /* Keep pagination below slider */
+            position: static !important;
             margin-top: var(--space-lg);
         }
         .swiper-pagination-bullet {
             background: var(--muted) !important;
             opacity: 0.7 !important;
             transition: all 0.3s ease !important;
-            width: 10px !important; /* Consistent size */
+            width: 10px !important;
             height: 10px !important;
         }
 
         .swiper-pagination-bullet-active {
             background: var(--primary) !important;
             opacity: 1 !important;
-            width: 16px !important; /* Make active bullet wider */
+            width: 16px !important;
             border-radius: var(--rounded-full) !important;
         }
 
-
-        /* ==========================================================================
-           11. CONTACT SECTION
-           ========================================================================== */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted minmax */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: var(--space-2xl);
-            background: var(--dark-medium); /* Container background */
+            background: var(--dark-medium);
             padding: var(--space-2xl);
             border-radius: var(--rounded-xl);
             border: 1px solid var(--border-color);
@@ -1199,7 +1179,7 @@
             align-items: center;
             font-size: var(--text-lg);
             color: var(--primary);
-            flex-shrink: 0; /* Prevent shrinking */
+            flex-shrink: 0;
         }
 
         .contact-item h4 {
@@ -1212,9 +1192,9 @@
             font-size: var(--text-sm);
             margin-bottom: 0;
             color: var(--muted);
-            word-break: break-word; /* Prevent long emails/usernames from overflowing */
+            word-break: break-word;
         }
-        .contact-item p a { /* Style link inside contact item */
+        .contact-item p a {
             color: var(--muted);
             text-decoration: none;
         }
@@ -1223,9 +1203,7 @@
             text-decoration: underline;
         }
 
-        .contact-socials {
-            margin-top: var(--space-xl);
-        }
+        .contact-socials { margin-top: var(--space-xl); }
         .contact-socials h4 {
             font-size: var(--text-base);
             margin-bottom: var(--space-md);
@@ -1236,14 +1214,13 @@
             font-size: var(--text-xl);
             margin-right: var(--space-md);
             transition: color 0.3s ease, transform 0.3s ease;
-            display: inline-block; /* Needed for transform */
+            display: inline-block;
         }
         .contact-socials a:hover {
             color: var(--primary);
             transform: translateY(-3px);
         }
 
-        /* Contact Form */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -1251,9 +1228,8 @@
         }
 
         .form-group {
-            position: relative; /* For error messages */
-            /* Add margin bottom to make space for absolute positioned errors */
-             margin-bottom: var(--space-xs); /* Base margin, will be increased if error shows */
+            position: relative;
+            margin-bottom: var(--space-xs);
         }
 
         .form-label {
@@ -1263,8 +1239,7 @@
             margin-bottom: var(--space-xs);
         }
 
-        .form-input,
-        .form-textarea {
+        .form-input, .form-textarea {
             width: 100%;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
@@ -1274,14 +1249,12 @@
             font-size: var(--text-base);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .form-input::placeholder,
-        .form-textarea::placeholder {
+        .form-input::placeholder, .form-textarea::placeholder {
             color: var(--light-medium);
             opacity: 0.7;
         }
 
-        .form-input:focus,
-        .form-textarea:focus {
+        .form-input:focus, .form-textarea:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.3);
@@ -1289,37 +1262,28 @@
 
         .form-textarea {
             min-height: 120px;
-            resize: vertical; /* Allow vertical resize */
+            resize: vertical;
         }
 
-        /* Form Validation & Status */
-        .form-input.invalid,
-        .form-textarea.invalid {
+        .form-input.invalid, .form-textarea.invalid {
             border-color: var(--danger);
             box-shadow: 0 0 0 3px rgba(237, 66, 69, 0.3);
         }
         .error-message {
             color: var(--danger);
             font-size: var(--text-xs);
-            /* margin-top: var(--space-xs); */
-            display: none; /* Hidden by default */
-            position: absolute; /* Position below input */
+            display: none;
+            position: absolute;
             left: 0;
-            /* bottom: calc(-1 * var(--space-sm) - 0.5em);  */
-             /* Adjust positioning */
-             padding-top: var(--space-xs);
+            padding-top: var(--space-xs);
         }
 
-         /* Add margin to form group if error is visible */
         .form-group:has(.error-message[style="display: block;"]) {
-            /* Add extra space ONLY when error is shown */
-            padding-bottom: 1.5em; /* Adjust this value as needed */
+            padding-bottom: 1.5em;
         }
 
-
-        .form-input.invalid + .error-message,
-        .form-textarea.invalid + .error-message {
-            display: block; /* Show when invalid */
+        .form-input.invalid + .error-message, .form-textarea.invalid + .error-message {
+            display: block;
         }
 
         #formStatus {
@@ -1328,15 +1292,13 @@
             border-radius: var(--rounded-md);
             font-size: var(--text-sm);
             text-align: center;
-            display: none; /* Hidden initially */
+            display: none;
         }
-        #formStatus.visible {
-            display: block; /* Show when there is a message */
-        }
-        #formStatus.info { /* Added info class for pending state */
-             background-color: rgba(58, 191, 248, 0.2);
-             color: var(--info);
-             border: 1px solid var(--info);
+        #formStatus.visible { display: block; }
+        #formStatus.info {
+            background-color: rgba(58, 191, 248, 0.2);
+            color: var(--info);
+            border: 1px solid var(--info);
         }
         #formStatus.success {
             background-color: rgba(59, 165, 92, 0.2);
@@ -1350,34 +1312,30 @@
         }
 
         .form-submit-btn {
-            width: 100%; /* Full width button */
-            padding: var(--space-md); /* Larger padding */
-            margin-top: var(--space-sm); /* Add space above button */
+            width: 100%;
+            padding: var(--space-md);
+            margin-top: var(--space-sm);
         }
         .form-submit-btn:disabled {
             opacity: 0.7;
             cursor: not-allowed;
             background: var(--dark-muted);
             box-shadow: none;
-             transform: none;
+            transform: none;
         }
 
-
-        /* ==========================================================================
-           12. FOOTER
-           ========================================================================== */
         .footer {
-            background: var(--darker); /* Darkest background */
-            padding: var(--space-2xl) 0 var(--space-lg); /* Adjust padding */
+            background: var(--darker);
+            padding: var(--space-2xl) 0 var(--space-lg);
             border-top: 1px solid var(--border-color);
-            margin-top: var(--space-3xl); /* Space before footer */
+            margin-top: var(--space-3xl);
         }
 
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: var(--space-lg); /* Increased gap */
+            gap: var(--space-lg);
             text-align: center;
         }
 
@@ -1394,9 +1352,9 @@
 
         .footer-links {
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping */
+            flex-wrap: wrap;
             justify-content: center;
-            gap: var(--space-lg); /* Increased gap */
+            gap: var(--space-lg);
             margin-bottom: var(--space-xs);
         }
 
@@ -1410,13 +1368,13 @@
             text-decoration: underline;
         }
 
-        .social-links { /* Reusing class name, ensure distinct styling */
+        .social-links {
             display: flex;
-            gap: var(--space-lg); /* Increased gap */
+            gap: var(--space-lg);
             margin-bottom: var(--space-md);
         }
 
-        .social-links .social-link { /* Target footer social links */
+        .social-links .social-link {
             width: 40px;
             height: 40px;
             background: rgba(255, 255, 255, 0.1);
@@ -1433,15 +1391,15 @@
             background: var(--primary);
             color: white;
             transform: translateY(-3px);
-            text-decoration: none; /* Remove underline */
+            text-decoration: none;
         }
 
         .copyright {
             color: var(--muted);
             font-size: var(--text-sm);
-            margin-bottom: var(--space-xs); /* Reduced margin */
+            margin-bottom: var(--space-xs);
         }
-        .copyright i { /* Heart icon */
+        .copyright i {
             font-size: 0.9em;
             margin: 0 var(--space-xxs);
             vertical-align: baseline;
@@ -1452,14 +1410,8 @@
             font-size: var(--text-xs);
             margin-bottom: 0;
         }
-        .location-info i {
-            margin-right: var(--space-xs);
-        }
+        .location-info i { margin-right: var(--space-xs); }
 
-
-        /* ==========================================================================
-           13. BACK TO TOP BUTTON
-           ========================================================================== */
         .back-to-top {
             position: fixed;
             bottom: var(--space-lg);
@@ -1475,9 +1427,9 @@
             font-size: var(--text-lg);
             box-shadow: var(--shadow-lg);
             z-index: var(--z-back-to-top);
-            opacity: 0; /* Hidden by default */
+            opacity: 0;
             visibility: hidden;
-            transform: translateY(20px); /* Start off-screen */
+            transform: translateY(20px);
             transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
         }
 
@@ -1491,136 +1443,60 @@
             transform: scale(1.1);
             box-shadow: var(--shadow-xl);
         }
-        .back-to-top:focus-visible { /* Specific focus for round button */
-             outline: 3px solid var(--primary);
-             outline-offset: 3px;
+        .back-to-top:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
         }
 
-        /* ==========================================================================
-            14. RESPONSIVE ADJUSTMENTS (Additional/Refined)
-           ========================================================================== */
-
         @media (max-width: 1024px) {
-            /* Adjust container padding if needed */
-             .container {
-                padding: 0 var(--space-lg);
-            }
-            /* Adjust grid gaps */
-            .about-grid, .stats-grid, .projects-grid, .contact-grid {
-                gap: var(--space-lg);
-            }
-             .projects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust min size */
-            }
+            .container { padding: 0 var(--space-lg); }
+            .about-grid, .stats-grid, .projects-grid, .contact-grid { gap: var(--space-lg); }
+            .projects-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
         }
 
         @media (max-width: 768px) {
-            /* General font size adjustments */
-            html {
-                font-size: 15px; /* Slightly smaller base font on tablets */
-            }
-            .section {
-                padding: var(--space-2xl) 0; /* Reduce section padding */
-            }
-            .section-title {
-                margin-bottom: var(--space-xl); /* Reduce title margin */
-            }
-            .section-title::after {
-                 bottom: -10px;
-            }
-             /* Stack grids */
+            html { font-size: 15px; }
+            .section { padding: var(--space-2xl) 0; }
+            .section-title { margin-bottom: var(--space-xl); }
+            .section-title::after { bottom: -10px; }
             .about-grid, .contact-grid {
-                grid-template-columns: 1fr; /* Stack columns */
-                text-align: center; /* Center text */
-            }
-             .about-image-wrapper {
-                max-width: 350px; /* Smaller image on mobile */
-                margin-bottom: var(--space-xl);
-                 margin-left: auto; margin-right: auto; /* Ensure centering */
-            }
-            .about-text h3, .skills-title, .contact-info h3 {
-                justify-content: center; /* Center titles */
-            }
-            .skills {
-                justify-content: center; /* Center skills */
-            }
-             .contact-grid {
-                 padding: var(--space-lg); /* Reduce padding */
-             }
-            .contact-item {
-                justify-content: center; /* Center contact items */
-                text-align: left; /* Keep text left-aligned */
-            }
-             .contact-socials {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            .about-image-wrapper {
+                max-width: 350px;
+                margin-bottom: var(--space-xl);
+                margin-left: auto;
+                margin-right: auto;
             }
+            .about-text h3, .skills-title, .contact-info h3 { justify-content: center; }
+            .skills { justify-content: center; }
+            .contact-grid { padding: var(--space-lg); }
+            .contact-item { justify-content: center; text-align: left; }
+            .contact-socials { text-align: center; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 480px) {
-             html {
-                font-size: 14px; /* Smaller base font on phones */
-            }
-            .container {
-                padding: 0 var(--space-md); /* Less padding on mobile */
-            }
-            .section {
-                padding: var(--space-xl) 0; /* Further reduce section padding */
-            }
-             .section-title {
-                margin-bottom: var(--space-lg);
-            }
-            .btn {
-                padding: var(--space-sm) var(--space-md); /* Adjust button padding */
-                font-size: var(--text-sm);
-            }
-            .stats-grid {
-                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Adjust stat columns */
-                gap: var(--space-md);
-            }
-            .stat-card {
-                 padding: var(--space-lg) var(--space-md);
-            }
-            .projects-grid {
-                 grid-template-columns: 1fr; /* Single column projects */
-                 gap: var(--space-lg);
-            }
-            .filter-btn {
-                font-size: var(--text-xs);
-                padding: var(--space-xs) var(--space-md);
-            }
-             .project-filters {
-                 margin-bottom: var(--space-xl);
-             }
-            .testimonial-card {
-                padding: var(--space-lg) var(--space-md); /* Adjust padding */
-            }
-            .testimonial-author-img {
-                width: 60px; height: 60px;
-            }
-             .testimonial-content {
-                padding-top: 35px;
-            }
-             /* Swiper arrows already hidden via previous rule */
-             .footer-links {
-                gap: var(--space-md);
-            }
-            .social-links {
-                gap: var(--space-md);
-            }
-            .contact-grid {
-                 padding: var(--space-md);
-                 gap: var(--space-lg);
-            }
-            .form-group:has(.error-message[style="display: block;"]) {
-                 /* Ensure enough space even on mobile */
-                  padding-bottom: 1.8em; /* Slightly more space if needed */
-            }
+            html { font-size: 14px; }
+            .container { padding: 0 var(--space-md); }
+            .section { padding: var(--space-xl) 0; }
+            .section-title { margin-bottom: var(--space-lg); }
+            .btn { padding: var(--space-sm) var(--space-md); font-size: var(--text-sm); }
+            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--space-md); }
+            .stat-card { padding: var(--space-lg) var(--space-md); }
+            .projects-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
+            .filter-btn { font-size: var(--text-xs); padding: var(--space-xs) var(--space-md); }
+            .project-filters { margin-bottom: var(--space-xl); }
+            .testimonial-card { padding: var(--space-lg) var(--space-md); }
+            .testimonial-author-img { width: 60px; height: 60px; }
+            .testimonial-content { padding-top: 35px; }
+            .footer-links { gap: var(--space-md); }
+            .social-links { gap: var(--space-md); }
+            .contact-grid { padding: var(--space-md); gap: var(--space-lg); }
+            .form-group:has(.error-message[style="display: block;"]) { padding-bottom: 1.8em; }
         }
 
-        /* Utility: Hide visually but keep accessible for screen readers */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -1633,11 +1509,7 @@
             border-width: 0;
         }
 
-        /* Utility: Simple class to hide elements */
-        .hidden {
-            display: none !important;
-        }
-
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
@@ -1648,6 +1520,7 @@
         </div>
     </div>
 
+    <div class="scroll-progress"></div>
     <div class="background" aria-hidden="true"></div>
     <div class="overlay" aria-hidden="true"></div>
     <div class="particles" id="particles" aria-hidden="true"></div>
@@ -1667,9 +1540,15 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
 
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                    <span class="sr-only">Open menu</span> </button>
+                <div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                        <span class="sr-only">Open menu</span>
+                    </button>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -1681,48 +1560,94 @@
                     <h1 class="hero-title" id="hero-title">Hi, I'm <span class="gradient-text typing-container"><span class="typing-text">Kem</span></span></h1>
                     <h2 class="hero-subtitle">Developer & Designer at VMOS Cloud</h2>
                     <p class="animate-on-scroll">
-                        Passionate about creating beautiful, functional, and user-centric digital experiences. Specialized in modern web technologies. Based in Hanoi, Vietnam.
+                        Passionate about creating beautiful, functional, and high-performance web experiences. I contribute to innovative projects at VMOS Cloud. My expertise lies in front-end development (React, Vue, modern CSS) but I'm also comfortable navigating the back-end (Node.js, Express) and databases (MongoDB, Firebase).
                     </p>
-                    <div class="hero-btns animate-on-scroll" style="transition-delay: 0.2s;">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-briefcase" aria-hidden="true"></i> View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Get In Touch
-                        </a>
+                    <p>
+                        I thrive on challenges and am dedicated to building high-performance web applications with exceptional user interfaces. Always eager to learn and adapt to new technologies.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
                     </div>
                 </div>
-                 <img src="" class="hero-image" alt="" loading="lazy">
+                <img src="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp" class="hero-image" alt="Kem's Avatar" loading="lazy">
             </div>
         </section>
 
         <section class="section" id="about" aria-labelledby="about-title">
             <div class="container">
                 <h2 class="section-title animate-on-scroll" id="about-title">About <span class="gradient-text">Me</span></h2>
-                <div class="about-grid animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="about-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp" alt="Photo of Kem" class="about-image" loading="lazy">
+                <div class="about-grid">
+                    <div class="about-image-wrapper animate-on-scroll">
+                        <img src="https://raw.githubusercontent.com/vmoscloudteam/team/refs/heads/master/kem/kem.webp" class="about-image" alt="Kem's Profile Image" loading="lazy">
                     </div>
-                    <div class="about-text">
-                        <h3><i class="fas fa-user-circle" aria-hidden="true"></i> Who Am I?</h3>
+                    <div class="about-text animate-on-scroll" style="transition-delay: 0.1s;">
+                        <h3><i class="fas fa-user" aria-hidden="true"></i> Who I Am</h3>
                         <p>
-                            I'm a versatile Developer and Designer based in Hanoi, Vietnam, currently contributing to the innovative projects at VMOS Cloud. My expertise lies in front-end development (React, Vue, modern CSS) but I'm also comfortable navigating the back-end (Node.js, Express) and databases (MongoDB, Firebase).
-                        </p>
-                        <p>
-                            I thrive on challenges and am dedicated to building high-performance web applications with exceptional user interfaces. Always eager to learn and adapt to new technologies.
+                            I'm Kem, a developer and designer based in Hanoi, Vietnam, working with VMOS Cloud. I specialize in crafting seamless digital experiences that combine aesthetics with functionality.
                         </p>
                         <h4 class="skills-title"><i class="fas fa-cogs" aria-hidden="true"></i> Key Skills</h4>
                         <div class="skills" role="list" aria-label="Key Skills">
-                            <span class="skill" role="listitem"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
-                            <span class="skill" role="listitem"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3/Sass</span>
-                            <span class="skill" role="listitem"><i class="fab fa-js" aria-hidden="true"></i> JavaScript (ES6+)</span>
-                            <span class="skill" role="listitem"><i class="fab fa-react" aria-hidden="true"></i> React</span>
-                            <span class="skill" role="listitem"><i class="fab fa-vuejs" aria-hidden="true"></i> Vue.js</span>
-                            <span class="skill" role="listitem"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</span>
-                            <span class="skill" role="listitem"><i class="fas fa-database" aria-hidden="true"></i> MongoDB</span>
-                            <span class="skill" role="listitem"><i class="fab fa-git-alt" aria-hidden="true"></i> Git/GitHub</span>
-                            <span class="skill" role="listitem"><i class="fas fa-paint-brush" aria-hidden="true"></i> UI/UX Design</span>
-                            <span class="skill" role="listitem"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Responsive Design</span>
+                            <div class="skill" role="listitem" aria-label="HTML5: 90% proficiency">
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="CSS3/Sass: 85% proficiency">
+                                <span class="skill-name">CSS3/Sass</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="JavaScript (ES6+): 80% proficiency">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="React: 75% proficiency">
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="Vue.js: 70% proficiency">
+                                <span class="skill-name">Vue.js</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="Node.js: 65% proficiency">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="MongoDB: 60% proficiency">
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="Git/GitHub: 85% proficiency">
+                                <span class="skill-name">Git/GitHub</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="UI/UX Design: 80% proficiency">
+                                <span class="skill-name">UI/UX Design</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill" role="listitem" aria-label="Responsive Design: 90% proficiency">
+                                <span class="skill-name">Responsive Design</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="skill-level" style="width: 90%;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1731,7 +1656,7 @@
 
         <section class="section stats-section" aria-labelledby="stats-title">
             <div class="container">
-                 <h2 class="section-title animate-on-scroll" id="stats-title">My <span class="gradient-text">Achievements</span></h2>
+                <h2 class="section-title animate-on-scroll" id="stats-title">My <span class="gradient-text">Achievements</span></h2>
                 <div class="stats-grid">
                     <div class="stat-card animate-on-scroll">
                         <i class="fas fa-project-diagram stat-icon" aria-hidden="true"></i>
@@ -1744,13 +1669,14 @@
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card animate-on-scroll" style="transition-delay: 0.2s;">
-                         <i class="fas fa-smile-beam stat-icon" aria-hidden="true"></i>
+                        <i class="fas fa-smile-beam stat-icon" aria-hidden="true"></i>
                         <div class="stat-number" data-count="100">0</div>
                         <div class="stat-label">Positive Feedbacks</div>
                     </div>
                     <div class="stat-card animate-on-scroll" style="transition-delay: 0.3s;">
-                         <i class="fas fa-mug-hot stat-icon" aria-hidden="true"></i>
-                        <div class="stat-number" data-count="999">0</div> <div class="stat-label">Cups of Coffee</div>
+                        <i class="fas fa-mug-hot stat-icon" aria-hidden="true"></i>
+                        <div class="stat-number" data-count="999">0</div>
+                        <div class="stat-label">Cups of Coffee</div>
                     </div>
                 </div>
             </div>
@@ -1759,7 +1685,6 @@
         <section class="section" id="projects" aria-labelledby="projects-title">
             <div class="container">
                 <h2 class="section-title animate-on-scroll" id="projects-title">Featured <span class="gradient-text">Projects</span></h2>
-
                 <div class="project-filters animate-on-scroll" style="transition-delay: 0.2s;" role="tablist" aria-label="Project Filters">
                     <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
                     <button class="filter-btn" data-filter="react" role="tab" aria-selected="false">React</button>
@@ -1767,8 +1692,8 @@
                     <button class="filter-btn" data-filter="node" role="tab" aria-selected="false">Node.js</button>
                     <button class="filter-btn" data-filter="uiux" role="tab" aria-selected="false">UI/UX</button>
                 </div>
-
-                <div class="projects-grid" aria-live="polite"> <article class="project-card animate-on-scroll" data-tags="react,node,mongodb,uiux" aria-labelledby="project-title-1">
+                <div class="projects-grid" aria-live="polite">
+                    <article class="project-card animate-on-scroll" data-tags="react,node,mongodb,uiux" data-title="VMOS Cloud Platform" data-description="A comprehensive cloud management solution for businesses. Built with React and Node.js, this platform streamlines workflows and enhances productivity with a sleek, user-friendly interface." data-image="https://picsum.photos/seed/project1/600/400" data-demo="https://example.com/vmos-demo" data-code="https://github.com/kem/vmos-cloud" aria-labelledby="project-title-1">
                         <div class="project-image-container">
                             <img src="https://picsum.photos/seed/project1/600/400" class="project-image" alt="VMOS Cloud Platform Screenshot" loading="lazy">
                         </div>
@@ -1784,18 +1709,17 @@
                                 <span class="project-tag">UI/UX</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://example.com/vmos-demo" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fas fa-eye" aria-hidden="true"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/kem/vmos-cloud" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fab fa-github" aria-hidden="true"></i> Code
                                 </a>
                             </div>
                         </div>
                     </article>
-
-                    <article class="project-card animate-on-scroll" data-tags="vue,firebase,uiux" aria-labelledby="project-title-2">
-                         <div class="project-image-container">
+                    <article class="project-card animate-on-scroll" data-tags="vue,firebase,uiux" data-title="E-commerce Dashboard" data-description="Feature-rich admin panel for managing products, orders, and customers. Built with Vue.js and Firebase, it provides real-time updates and intuitive controls for e-commerce management." data-image="https://picsum.photos/seed/project2/600/400" data-demo="https://example.com/ecommerce-demo" data-code="https://github.com/kem/ecommerce-dashboard" aria-labelledby="project-title-2">
+                        <div class="project-image-container">
                             <img src="https://picsum.photos/seed/project2/600/400" class="project-image" alt="E-commerce Dashboard Screenshot" loading="lazy">
                         </div>
                         <div class="project-content">
@@ -1810,17 +1734,16 @@
                                 <span class="project-tag">UI/UX</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://example.com/ecommerce-demo" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fas fa-eye" aria-hidden="true"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/kem/ecommerce-dashboard" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fab fa-github" aria-hidden="true"></i> Code
                                 </a>
                             </div>
                         </div>
                     </article>
-
-                    <article class="project-card animate-on-scroll" data-tags="html,css,js,uiux" aria-labelledby="project-title-3">
+                    <article class="project-card animate-on-scroll" data-tags="html,css,js,uiux" data-title="Creative Portfolio Template" data-description="A modern and animated portfolio template built with vanilla HTML, CSS, and JavaScript. Perfect for showcasing personal projects with a touch of creativity." data-image="https://picsum.photos/seed/project3/600/400" data-demo="https://example.com/portfolio-demo" data-code="https://github.com/kem/portfolio-template" aria-labelledby="project-title-3">
                         <div class="project-image-container">
                             <img src="https://picsum.photos/seed/project3/600/400" class="project-image" alt="Creative Portfolio Template Screenshot" loading="lazy">
                         </div>
@@ -1836,17 +1759,16 @@
                                 <span class="project-tag">UI/UX</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://example.com/portfolio-demo" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fas fa-eye" aria-hidden="true"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/kem/portfolio-template" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fab fa-github" aria-hidden="true"></i> Code
                                 </a>
                             </div>
                         </div>
                     </article>
-
-                     <article class="project-card animate-on-scroll" data-tags="react,node" aria-labelledby="project-title-4">
+                    <article class="project-card animate-on-scroll" data-tags="react,node" data-title="Task Management App" data-description="A collaborative task management tool built with React and Express.js. Designed to improve team productivity with real-time task tracking and updates." data-image="https://picsum.photos/seed/project4/600/400" data-demo="https://example.com/task-demo" data-code="https://github.com/kem/task-manager" aria-labelledby="project-title-4">
                         <div class="project-image-container">
                             <img src="https://picsum.photos/seed/project4/600/400" class="project-image" alt="Task Management App Screenshot" loading="lazy">
                         </div>
@@ -1861,24 +1783,23 @@
                                 <span class="project-tag">Express</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://example.com/task-demo" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fas fa-eye" aria-hidden="true"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/kem/task-manager" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
                                     <i class="fab fa-github" aria-hidden="true"></i> Code
                                 </a>
                             </div>
                         </div>
                     </article>
-                     </div>
+                </div>
             </div>
         </section>
 
         <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
             <div class="container">
                 <h2 class="section-title animate-on-scroll" id="testimonials-title">Client <span class="gradient-text">Testimonials</span></h2>
-
-                 <div class="swiper testimonials-slider animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="swiper testimonials-slider animate-on-scroll" style="transition-delay: 0.2s;">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" role="group" aria-label="Testimonial 1 of 3">
                             <figure class="testimonial-card">
@@ -1894,11 +1815,11 @@
                             </figure>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="Testimonial 2 of 3">
-                             <figure class="testimonial-card">
+                            <figure class="testimonial-card">
                                 <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Photo of Sarah Johnson" class="testimonial-author-img" loading="lazy">
                                 <figcaption class="testimonial-content">
                                     <blockquote class="testimonial-text">"Working with Kem was a pleasure. He understood our vision perfectly and translated it into a beautiful, functional digital product. Communication was excellent throughout the project."</blockquote>
-                                     <div class="testimonial-author">
+                                    <div class="testimonial-author">
                                         <h4>Sarah Johnson</h4>
                                         <span>Marketing Director, BrandCo</span>
                                     </div>
@@ -1907,11 +1828,11 @@
                             </figure>
                         </div>
                         <div class="swiper-slide" role="group" aria-label="Testimonial 3 of 3">
-                             <figure class="testimonial-card">
+                            <figure class="testimonial-card">
                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Photo of Michael Chen" class="testimonial-author-img" loading="lazy">
                                 <figcaption class="testimonial-content">
                                     <blockquote class="testimonial-text">"Kem's technical expertise and design sensibility are top-notch. The platform he built for us is robust, performant, and user-friendly. We couldn't be happier with the result."</blockquote>
-                                     <div class="testimonial-author">
+                                    <div class="testimonial-author">
                                         <h4>Michael Chen</h4>
                                         <span>CTO, StartupX</span>
                                     </div>
@@ -1919,7 +1840,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        </div>
+                    </div>
                     <div class="swiper-pagination" role="tablist" aria-label="Testimonial Pagination"></div>
                     <button class="swiper-button-prev" aria-label="Previous testimonial"></button>
                     <button class="swiper-button-next" aria-label="Next testimonial"></button>
@@ -1940,13 +1861,15 @@
                             <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <h4>Email</h4>
-                                <p><a href="mailto:contact@kemdev.com">contact@kemdev.com</a></p> </div>
+                                <p><a href="/cdn-cgi/l/email-protection#6e0d01001a0f0d1a2e050b030a0b18400d0103"><span class="__cf_email__" data-cfemail="9cbff3b2a8bdbfa8dcb7b9b1b8b9aaf2bfb3b1">[email&#160;protected]</span></a></p>
+                            </div>
                         </div>
                         <div class="contact-item">
-                             <div class="contact-icon" aria-hidden="true"><i class="fab fa-discord"></i></div>
+                            <div class="contact-icon" aria-hidden="true"><i class="fab fa-discord"></i></div>
                             <div>
                                 <h4>Discord</h4>
-                                <p>Kem#1234</p> </div>
+                                <p>Kem#1234</p>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
@@ -1955,16 +1878,15 @@
                                 <p>Hanoi, Vietnam</p>
                             </div>
                         </div>
-                         <div class="contact-socials">
+                        <div class="contact-socials">
                             <h4>Follow Me:</h4>
                             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="My GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
                             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="My LinkedIn Profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="My Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            </div>
+                        </div>
                     </div>
-
                     <form class="contact-form" id="contactForm" novalidate aria-label="Contact Form">
-                         <div class="form-group">
+                        <div class="form-group">
                             <label for="name" class="form-label">Your Name</label>
                             <input type="text" id="name" name="name" class="form-input" required placeholder="Enter your full name" aria-required="true" aria-describedby="nameError">
                             <div class="error-message" id="nameError" role="alert"></div>
@@ -1972,22 +1894,23 @@
                         <div class="form-group">
                             <label for="email" class="form-label">Your Email</label>
                             <input type="email" id="email" name="email" class="form-input" required placeholder="Enter your email address" aria-required="true" aria-describedby="emailError">
-                             <div class="error-message" id="emailError" role="alert"></div>
+                            <div class="error-message" id="emailError" role="alert"></div>
                         </div>
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
                             <input type="text" id="subject" name="subject" class="form-input" required placeholder="What is this about?" aria-required="true" aria-describedby="subjectError">
-                             <div class="error-message" id="subjectError" role="alert"></div>
+                            <div class="error-message" id="subjectError" role="alert"></div>
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
                             <textarea id="message" name="message" class="form-textarea" rows="5" required placeholder="Your message here..." aria-required="true" aria-describedby="messageError"></textarea>
-                             <div class="error-message" id="messageError" role="alert"></div>
+                            <div class="error-message" id="messageError" role="alert"></div>
                         </div>
                         <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">
                             <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
                         </button>
-                        <div id="formStatus" role="alert" aria-live="assertive"></div> </form>
+                        <div id="formStatus" role="alert" aria-live="assertive"></div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -2006,7 +1929,7 @@
                         <li><a href="#about" class="footer-link">About</a></li>
                         <li><a href="#projects" class="footer-link">Projects</a></li>
                         <li><a href="#contact" class="footer-link">Contact</a></li>
-                        </ul>
+                    </ul>
                 </nav>
                 <div class="social-links">
                     <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="My GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -2015,7 +1938,7 @@
                     <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="My LinkedIn Profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                 </div>
                 <p class="copyright">© <span id="current-year">2025</span> Kem. Designed & Developed with <i class="fas fa-heart" style="color: #ED4245;" aria-hidden="true"></i><span class="sr-only">love</span>.</p>
-                 <p class="location-info"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Hanoi, Vietnam</p>
+                <p class="location-info"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Hanoi, Vietnam</p>
             </div>
         </div>
     </footer>
@@ -2024,61 +1947,54 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
+    <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="" class="modal-image" alt="" loading="lazy">
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-tags" aria-label="Technologies used"></div>
+            <div class="modal-links">
+                <a href="#" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
-        /**
-         * Portfolio Script (Embedded - Revised for Robustness)
-         *
-         * Handles animations, interactions, form validation, etc.
-         * Author: Kem (Based on original + enhancements by AI)
-         * Version: 1.3.0 (Single File - Bugfix Attempt)
-         */
-
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Preloader ---
             const preloader = document.getElementById('preloader');
             const progressBar = document.getElementById('progressBar');
             if (preloader && progressBar) {
-                 // Ensure transition starts after initial render
                 requestAnimationFrame(() => {
-                   progressBar.style.width = '100%';
+                    progressBar.style.width = '100%';
                 });
 
-                // Hide preloader after a delay
-                // Use window.load as a fallback if DOMContentLoaded isn't sufficient for progress bar transition
                 let loaded = false;
                 const hidePreloader = () => {
                     if (loaded) return;
                     loaded = true;
                     preloader.classList.add('hidden');
-                    document.body.classList.add('loaded'); // Add class to body for fade-in effect
-                    initializePageFunctions(); // Initialize other functions after preloader is gone
+                    document.body.classList.add('loaded');
+                    initializePageFunctions();
                 };
 
-                // Hide after timeout OR when window is fully loaded, whichever comes later ensures animation plays
-                setTimeout(hidePreloader, 2000); // Minimum time
-                window.addEventListener('load', () => setTimeout(hidePreloader, 0) ); // Ensure it hides after load if timeout is too short
-
+                setTimeout(hidePreloader, 2000);
+                window.addEventListener('load', () => setTimeout(hidePreloader, 0));
             } else {
-                // If no preloader, initialize immediately
                 console.warn("Preloader elements not found.");
                 document.body.classList.add('loaded');
                 initializePageFunctions();
             }
         });
 
-        /**
-         * Initializes all main page functions after DOM is ready and preloader is hidden.
-         * Uses try...catch for each major setup function for better error isolation.
-         */
         function initializePageFunctions() {
             console.log('Initializing page functions...');
-
             const runSafely = (func, name) => {
                 try {
                     func();
-                    // console.log(`${name} initialized successfully.`);
                 } catch (error) {
                     console.error(`Error initializing ${name}:`, error);
                 }
@@ -2086,7 +2002,7 @@
 
             runSafely(setupHeaderScroll, 'Header Scroll');
             runSafely(setupMobileMenu, 'Mobile Menu');
-            runSafely(() => createParticles(30), 'Particles'); // Adjust particle count
+            runSafely(() => createParticles(30), 'Particles');
             runSafely(setupScrollAnimations, 'Scroll Animations');
             runSafely(setupSmoothScrolling, 'Smooth Scrolling');
             runSafely(updateCopyrightYear, 'Copyright Year');
@@ -2094,74 +2010,51 @@
             runSafely(initializeTestimonialSlider, 'Testimonial Slider');
             runSafely(setupProjectFiltering, 'Project Filtering');
             runSafely(setupContactForm, 'Contact Form');
-
+            runSafely(setupProjectModals, 'Project Modals');
+            runSafely(setupThemeToggle, 'Theme Toggle');
+            runSafely(setupScrollProgress, 'Scroll Progress');
             console.log('Page functions initialization attempt complete.');
         }
 
-        /**
-         * Adds scroll effect to the header.
-         */
         function setupHeaderScroll() {
             const header = document.getElementById('header');
-            if (!header) {
-                console.warn("Header element not found for scroll effect.");
-                return;
-            }
-
-            const scrollThreshold = 50; // Pixels to scroll before changing header style
-            let isScrolling; // Timeout ID for debouncing
-
+            if (!header) return;
+            const scrollThreshold = 50;
+            let isScrolling;
             window.addEventListener('scroll', () => {
-                 // Debounce scroll event slightly
-                 window.clearTimeout(isScrolling);
-                 isScrolling = setTimeout(() => {
-                     if (window.scrollY > scrollThreshold) {
-                         header.classList.add('scrolled');
-                     } else {
-                         header.classList.remove('scrolled');
-                     }
-                 }, 50); // Adjust debounce time if needed
-            }, { passive: true }); // Improve scroll performance
+                window.clearTimeout(isScrolling);
+                isScrolling = setTimeout(() => {
+                    header.classList.toggle('scrolled', window.scrollY > scrollThreshold);
+                }, 50);
+            }, { passive: true });
         }
 
-        /**
-         * Sets up the mobile menu toggle functionality.
-         */
         function setupMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
-
-            if (!mobileMenuBtn || !navLinks) {
-                console.warn("Mobile menu button or nav links not found.");
-                return;
-            }
+            if (!mobileMenuBtn || !navLinks) return;
 
             mobileMenuBtn.addEventListener('click', () => {
                 const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
                 navLinks.classList.toggle('active');
                 mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
-                // Change icon and sr-text based on state
                 mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
-                    ? '<i class="fas fa-times" aria-hidden="true"></i><span class="sr-only">Close menu</span>' // Close icon
-                    : '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';  // Bars icon
+                    ? '<i class="fas fa-times" aria-hidden="true"></i><span class="sr-only">Close menu</span>'
+                    : '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';
             });
 
-            // Close mobile menu when a link is clicked
             navLinks.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     if (navLinks.classList.contains('active')) {
-                         navLinks.classList.remove('active');
-                         mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                         mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';
                     }
                 });
             });
 
-             // Close mobile menu if user clicks outside of it
             document.addEventListener('click', (event) => {
-                if (navLinks.classList.contains('active') &&
-                    !navLinks.contains(event.target) &&
-                    !mobileMenuBtn.contains(event.target)) {
+                if (navLinks.classList.contains('active') && !navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
                     navLinks.classList.remove('active');
                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';
@@ -2169,60 +2062,35 @@
             });
         }
 
-        /**
-         * Creates floating particles in the background.
-         * @param {number} count - The number of particles to create.
-         */
         function createParticles(count) {
             const particlesContainer = document.getElementById('particles');
-            if (!particlesContainer) {
-                 console.warn("Particles container not found.");
-                 return;
-            }
-
-            // Clear existing particles if any
+            if (!particlesContainer) return;
             particlesContainer.innerHTML = '';
-            const fragment = document.createDocumentFragment(); // Use fragment for performance
+            const fragment = document.createDocumentFragment();
 
             for (let i = 0; i < count; i++) {
-                try {
-                    const particle = document.createElement('div');
-                    particle.classList.add('particle');
-                    particle.setAttribute('aria-hidden', 'true'); // Decorative element
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.setAttribute('aria-hidden', 'true');
+                const size = Math.random() * 4 + 1;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const opacity = Math.random() * 0.15 + 0.05;
+                const duration = Math.random() * 25 + 15;
+                const delay = Math.random() * 15;
 
-                    // Random properties
-                    const size = Math.random() * 4 + 1; // Slightly smaller max size
-                    const posX = Math.random() * 100;
-                    const posY = Math.random() * 100;
-                    const opacity = Math.random() * 0.15 + 0.05; // Even more subtle opacity
-                    const duration = Math.random() * 25 + 15; // Slower animation (15s to 40s)
-                    const delay = Math.random() * 15;
-
-                    // Apply styles
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${posX}%`;
-                    particle.style.top = `${posY}%`;
-                    particle.style.opacity = String(opacity);
-                    particle.style.animationDuration = `${duration}s`;
-                    particle.style.animationDelay = `${delay}s`;
-
-                    fragment.appendChild(particle);
-                } catch (error) {
-                    console.error("Error creating particle:", error);
-                    // Continue to next particle if one fails
-                }
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = String(opacity);
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                fragment.appendChild(particle);
             }
-             try {
-                 particlesContainer.appendChild(fragment);
-             } catch (error) {
-                 console.error("Error appending particles:", error);
-             }
+            particlesContainer.appendChild(fragment);
         }
 
-        /**
-         * Sets up Intersection Observer to trigger animations and other actions on scroll.
-         */
         function setupScrollAnimations() {
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             const statNumbers = document.querySelectorAll('.stat-number');
@@ -2230,345 +2098,163 @@
             const sections = document.querySelectorAll('section[id]');
 
             if (typeof IntersectionObserver === 'undefined') {
-                console.warn("IntersectionObserver not supported. Enabling fallback animations.");
-                // Fallback: Animate everything immediately
                 animatedElements.forEach(el => el.classList.add('animated'));
                 statNumbers.forEach(counter => { if (!counter.dataset.animated) animateCounter(counter); });
                 return;
             }
 
-            // Observer for general animations and stat counters
-            const animationObserverOptions = {
-                threshold: 0.1, // Trigger when 10% visible
-                rootMargin: '0px 0px -5% 0px' // Trigger slightly sooner
-            };
-            const animationObserver = new IntersectionObserver((entries, observerInstance) => {
+            const animationObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const target = entry.target;
-                        target.classList.add('animated'); // Apply general animation class
-
-                        // Stats counter animation (only once)
+                        target.classList.add('animated');
                         if (target.classList.contains('stat-number') && !target.dataset.animated) {
-                             try {
-                                 animateCounter(target);
-                                 target.dataset.animated = 'true'; // Mark as animated
-                             } catch (error) {
-                                 console.error("Error animating counter:", error, target);
-                             }
-                             observerInstance.unobserve(target); // Stop observing after animation
+                            animateCounter(target);
+                            target.dataset.animated = 'true';
+                            animationObserver.unobserve(target);
                         }
-                        // If general animations should only run once:
-                        // else if (target.classList.contains('animate-on-scroll')) {
-                        //     observerInstance.unobserve(target);
-                        // }
                     }
-                    // Optional: Remove animation class when scrolling out
-                    // else {
-                    //      entry.target.classList.remove('animated');
-                    // }
                 });
-            }, animationObserverOptions);
+            }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
 
-            // Observer for navigation link highlighting
-            const navObserverOptions = {
-                threshold: 0.4, // Section needs to be 40% visible
-                rootMargin: '-25% 0px -45% 0px' // Adjust trigger zone, larger top margin
-            };
             const navObserver = new IntersectionObserver((entries) => {
-                 let intersectingSections = [];
-                 entries.forEach(entry => {
-                     if (entry.isIntersecting) {
-                         intersectingSections.push(entry.target.getAttribute('id'));
-                     }
-                 });
-
-                 // Prioritize the section closest to the top of the viewport within the trigger zone
-                 let currentSectionId = null;
-                 if (intersectingSections.length > 0) {
-                     // Simple approach: take the first one that intersected (often the highest visible)
-                     currentSectionId = intersectingSections[0];
-                     // More complex logic could find the one with the largest intersection ratio etc.
-                 }
-
-                // Update active nav link
+                let intersectingSections = [];
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) intersectingSections.push(entry.target.getAttribute('id'));
+                });
+                let currentSectionId = intersectingSections[0];
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (currentSectionId && link.getAttribute('href') === `#${currentSectionId}`) {
-                        link.classList.add('active');
-                    }
+                    if (currentSectionId && link.getAttribute('href') === `#${currentSectionId}`) link.classList.add('active');
                 });
-
-                // Special case for top of page (Home)
-                if (window.scrollY < window.innerHeight * 0.4) { // If near the top
-                     navLinks.forEach(link => link.classList.remove('active'));
-                     const homeLink = document.querySelector('.nav-links .nav-link[href="#home"]');
-                     if (homeLink) homeLink.classList.add('active');
+                if (window.scrollY < window.innerHeight * 0.4) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    document.querySelector('.nav-links .nav-link[href="#home"]').classList.add('active');
                 }
+            }, { threshold: 0.4, rootMargin: '-25% 0px -45% 0px' });
 
-            }, navObserverOptions);
-
-            // Observe elements
-            animatedElements.forEach(el => {
-                if (el) animationObserver.observe(el); // Check if element exists
-            });
-            sections.forEach(section => {
-                if (section) navObserver.observe(section); // Check if section exists
-            });
+            animatedElements.forEach(el => el && animationObserver.observe(el));
+            sections.forEach(section => section && navObserver.observe(section));
         }
 
-
-        /**
-         * Animates a number counter from 0 to its target value.
-         * @param {HTMLElement} counterElement - The element displaying the number.
-         */
         function animateCounter(counterElement) {
-            if (!counterElement) return; // Check if element exists
-
+            if (!counterElement) return;
             const target = parseInt(counterElement.getAttribute('data-count'), 10);
             if (isNaN(target)) {
-                 console.error("Invalid data-count value:", counterElement.getAttribute('data-count'));
-                 counterElement.textContent = counterElement.getAttribute('data-count') || 'N/A';
-                 return;
+                counterElement.textContent = counterElement.getAttribute('data-count') || 'N/A';
+                return;
             }
-
-            const duration = 1500; // Animation duration in milliseconds
-            const stepDuration = 16; // Approx 60fps interval
+            const duration = 1500;
+            const stepDuration = 16;
             let startTime = null;
-
-            counterElement.innerText = '0'; // Start from 0
+            counterElement.innerText = '0';
 
             function step(timestamp) {
-                 try {
-                     if (!startTime) startTime = timestamp;
-                     const progress = timestamp - startTime;
-                     const percentage = Math.min(progress / duration, 1); // Ensure it doesn't exceed 1
-
-                     const currentCount = Math.floor(target * percentage);
-                     counterElement.innerText = currentCount.toLocaleString(); // Format number
-
-                     if (percentage < 1) {
-                         requestAnimationFrame(step); // Continue animation
-                     } else {
-                          counterElement.innerText = target.toLocaleString(); // Ensure final value is exact
-                     }
-                 } catch (error) {
-                      console.error("Error during counter animation step:", error);
-                      counterElement.innerText = target.toLocaleString(); // Set final value on error
-                 }
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                const percentage = Math.min(progress / duration, 1);
+                const currentCount = Math.floor(target * percentage);
+                counterElement.innerText = currentCount.toLocaleString();
+                if (percentage < 1) requestAnimationFrame(step);
+                else counterElement.innerText = target.toLocaleString();
             }
-
-            requestAnimationFrame(step); // Start the animation loop
+            requestAnimationFrame(step);
         }
 
-
-        /**
-         * Sets up smooth scrolling for anchor links.
-         */
         function setupSmoothScrolling() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                if (!anchor) return;
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
-                    if (!href) return;
-
                     if (href === "#" || (href.startsWith("#") && href.length > 1)) {
                         const targetId = href.substring(1);
-                        let targetElement;
-                        try {
-                             targetElement = document.getElementById(targetId);
-                        } catch (error) {
-                             console.error(`Error finding element with ID: ${targetId}`, error);
-                             return; // Stop if ID is invalid selector
-                        }
-
-
+                        const targetElement = document.getElementById(targetId);
                         if (targetElement) {
-                            e.preventDefault(); // Prevent default jump
-                            const header = document.getElementById('header');
-                            const headerOffset = header ? header.offsetHeight : 80; // Get header height dynamically or fallback
+                            e.preventDefault();
+                            const headerOffset = document.getElementById('header').offsetHeight || 80;
                             const elementPosition = targetElement.getBoundingClientRect().top;
                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
+                            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
 
-                            // Optional: Close mobile menu if open after clicking a link
                             const navLinks = document.getElementById('navLinks');
                             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                            if (navLinks && navLinks.classList.contains('active')) {
-                                // Ensure mobile menu button exists before trying to modify it
-                                if (mobileMenuBtn) {
-                                    navLinks.classList.remove('active');
-                                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';
-                                } else {
-                                     console.warn("Mobile menu button not found when trying to close menu.");
-                                }
+                            if (navLinks && navLinks.classList.contains('active') && mobileMenuBtn) {
+                                navLinks.classList.remove('active');
+                                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                                mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open menu</span>';
                             }
-                        } else {
-                             console.warn(`Smooth scroll target not found: #${targetId}`);
                         }
                     }
                 });
             });
         }
 
-        /**
-         * Updates the copyright year in the footer.
-         */
         function updateCopyrightYear() {
             const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            } else {
-                 console.warn("Copyright year element not found.");
-            }
+            if (yearElement) yearElement.textContent = new Date().getFullYear();
         }
 
-        /**
-         * Sets up the Back to Top button visibility and click behavior.
-         */
         function setupBackToTopButton() {
             const backToTopBtn = document.getElementById('backToTop');
-            if (!backToTopBtn) {
-                console.warn("Back to top button not found.");
-                return;
-            }
-
-            const scrollThreshold = 300; // Pixels to scroll before showing the button
-            let isScrolling; // Timeout ID for debouncing
+            if (!backToTopBtn) return;
+            const scrollThreshold = 300;
+            let isScrolling;
 
             window.addEventListener('scroll', () => {
-                 window.clearTimeout(isScrolling);
-                 isScrolling = setTimeout(() => {
-                    if (window.scrollY > scrollThreshold) {
-                        backToTopBtn.classList.add('show');
-                        backToTopBtn.classList.remove('hidden'); // Use class logic defined in CSS
-                    } else {
-                        backToTopBtn.classList.remove('show');
-                    }
-                 }, 150); // Adjust debounce time if needed
+                window.clearTimeout(isScrolling);
+                isScrolling = setTimeout(() => {
+                    backToTopBtn.classList.toggle('show', window.scrollY > scrollThreshold);
+                    backToTopBtn.classList.toggle('hidden', window.scrollY <= scrollThreshold);
+                }, 150);
             }, { passive: true });
 
             backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
 
-        /**
-         * Initializes the Swiper slider for testimonials.
-         */
         function initializeTestimonialSlider() {
-            // Check if Swiper library is loaded
             if (typeof Swiper === 'undefined') {
-                console.error("Swiper library not loaded. Testimonial slider disabled.");
-                // Hide slider controls if Swiper isn't available
+                console.error("Swiper library not loaded.");
                 const sliderContainer = document.querySelector('.testimonials-slider');
-                 if (sliderContainer) {
-                     const sliderControls = sliderContainer.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next');
-                     sliderControls.forEach(el => { if (el) el.style.display = 'none'; });
-                 }
+                if (sliderContainer) {
+                    sliderContainer.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next').forEach(el => el && (el.style.display = 'none'));
+                }
                 return;
             }
-             // Check if the slider container element exists
-             const sliderElement = document.querySelector('.testimonials-slider');
-             if (!sliderElement) {
-                  console.warn("Testimonial slider container (.testimonials-slider) not found.");
-                  return;
-             }
+            const sliderElement = document.querySelector('.testimonials-slider');
+            if (!sliderElement) return;
 
-
-            try {
-                const swiper = new Swiper('.testimonials-slider', {
-                    // Core parameters
-                    loop: true, // Enable continuous loop mode
-                    slidesPerView: 1, // Show one slide at a time
-                    spaceBetween: 30, // Space between slides (useful if showing multiple)
-                    grabCursor: true,
-                    watchOverflow: true, // Disable navigation if not enough slides
-                    observer: true, // Update Swiper on DOM changes within Swiper container
-                    observeParents: true, // Update Swiper on DOM changes within parent elements
-                    observeSlideChildren: true, // Update Swiper on DOM changes within slides
-
-
-                    // Autoplay
-                    autoplay: {
-                        delay: 6000, // Auto slide delay
-                        disableOnInteraction: false, // Don't stop autoplay on user interaction
-                        pauseOnMouseEnter: true, // Pause autoplay when mouse is over the slider
-                    },
-
-                    // Pagination
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        type: 'bullets', // Ensure bullets type
-                    },
-
-                    // Navigation arrows
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
-                     // Accessibility
-                     a11y: {
-                        enabled: true, // Ensure accessibility features are enabled
-                        prevSlideMessage: 'Previous testimonial',
-                        nextSlideMessage: 'Next testimonial',
-                        paginationBulletMessage: 'Go to testimonial {{index}}',
-                     },
-
-                    // Keyboard control
-                    keyboard: {
-                        enabled: true,
-                        onlyInViewport: false, // Allow keyboard control even when slider is partially out of view
-                    },
-                });
-             } catch (error) {
-                  console.error("Error initializing Swiper:", error);
-             }
+            new Swiper('.testimonials-slider', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                grabCursor: true,
+                watchOverflow: true,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
+                pagination: { el: '.swiper-pagination', clickable: true, type: 'bullets' },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                a11y: { enabled: true, prevSlideMessage: 'Previous testimonial', nextSlideMessage: 'Next testimonial', paginationBulletMessage: 'Go to testimonial {{index}}' },
+                keyboard: { enabled: true, onlyInViewport: false }
+            });
         }
 
-
-        /**
-         * Sets up filtering functionality for the projects section.
-         */
         function setupProjectFiltering() {
             const filterContainer = document.querySelector('.project-filters');
             const projectGrid = document.querySelector('.projects-grid');
-
-            if (!filterContainer || !projectGrid) {
-                console.warn("Project filter container or grid not found.");
-                return;
-            }
+            if (!filterContainer || !projectGrid) return;
 
             const filterButtons = filterContainer.querySelectorAll('.filter-btn');
-            const projectCards = projectGrid.querySelectorAll('.project-card'); // Get all cards initially
-
-            if (filterButtons.length === 0 || projectCards.length === 0) {
-                 console.warn("No filter buttons or project cards found for filtering.");
-                 return;
-            }
+            const projectCards = projectGrid.querySelectorAll('.project-card');
 
             filterContainer.addEventListener('click', (event) => {
-                if (!event.target.matches('.filter-btn')) return; // Only handle button clicks
-
+                if (!event.target.matches('.filter-btn')) return;
                 const clickedButton = event.target;
                 const filterValue = clickedButton.getAttribute('data-filter');
 
-                if (filterValue === null) {
-                     console.warn("Filter button missing data-filter attribute:", clickedButton);
-                     return;
-                }
-
-                // Update active button state
                 filterButtons.forEach(btn => {
                     btn.classList.remove('active');
                     btn.setAttribute('aria-selected', 'false');
@@ -2576,192 +2262,116 @@
                 clickedButton.classList.add('active');
                 clickedButton.setAttribute('aria-selected', 'true');
 
-
-                // Filter projects
                 projectCards.forEach(card => {
-                     if (!card) return; // Skip if card somehow becomes null
-                    const tagsAttr = card.getAttribute('data-tags');
-                    const tags = tagsAttr ? tagsAttr.toLowerCase().split(',') : []; // Ensure lowercase and handle missing attribute
+                    const tags = card.getAttribute('data-tags')?.toLowerCase().split(',') || [];
                     const shouldShow = filterValue === 'all' || tags.includes(filterValue.toLowerCase());
-
-                    // Use a class to hide/show for smoother transitions in CSS
-                    if (shouldShow) {
-                        card.classList.remove('hide');
-                         card.removeAttribute('hidden'); // Ensure not hidden for accessibility
-                    } else {
-                        card.classList.add('hide');
-                         card.setAttribute('hidden', ''); // Hide for accessibility
-                    }
+                    card.classList.toggle('hide', !shouldShow);
+                    card.toggleAttribute('hidden', !shouldShow);
                 });
             });
         }
 
-
-        /**
-         * Sets up contact form validation and submission simulation.
-         */
         function setupContactForm() {
             const form = document.getElementById('contactForm');
-            if (!form) {
-                 console.warn("Contact form not found.");
-                 return;
-            }
+            if (!form) return;
 
-            // Explicitly query for elements within the form context
             const nameInput = form.querySelector('#name');
             const emailInput = form.querySelector('#email');
             const subjectInput = form.querySelector('#subject');
             const messageInput = form.querySelector('#message');
             const submitBtn = form.querySelector('#submitBtn');
             const formStatus = form.querySelector('#formStatus');
+            if (!nameInput || !emailInput || !subjectInput || !messageInput || !submitBtn || !formStatus) return;
 
-             // Check if all required elements were found
-             if (!nameInput || !emailInput || !subjectInput || !messageInput || !submitBtn || !formStatus) {
-                 console.error("One or more contact form elements are missing. Check IDs.");
-                 return;
-             }
+            const allInputs = [nameInput, emailInput, subjectInput, messageInput];
 
-             const allInputs = [nameInput, emailInput, subjectInput, messageInput];
-
-
-            /**
-             * Shows an error message for a specific input.
-             * @param {HTMLInputElement|HTMLTextAreaElement} input - The input element.
-             * @param {string} message - The error message to display.
-             */
             function showError(input, message) {
-                 if (!input) return;
+                if (!input) return;
                 input.classList.add('invalid');
                 const errorElement = document.getElementById(input.id + 'Error');
                 if (errorElement) {
                     errorElement.textContent = message;
                     errorElement.style.display = 'block';
-                     // Associate error message with input for accessibility
-                     input.setAttribute('aria-invalid', 'true');
-                     input.setAttribute('aria-describedby', input.id + 'Error');
-                } else {
-                     console.warn(`Error message element not found for input ID: ${input.id}Error`);
+                    input.setAttribute('aria-invalid', 'true');
+                    input.setAttribute('aria-describedby', input.id + 'Error');
                 }
             }
 
-            /**
-             * Clears the error message for a specific input.
-             * @param {HTMLInputElement|HTMLTextAreaElement} input - The input element.
-             */
-             function clearError(input) {
-                  if (!input) return;
-                  input.classList.remove('invalid');
-                  input.removeAttribute('aria-invalid');
-                  input.removeAttribute('aria-describedby');
-                  const errorElement = document.getElementById(input.id + 'Error');
-                  if (errorElement) {
-                      errorElement.textContent = ''; // Clear message content
-                      errorElement.style.display = 'none';
-                  }
+            function clearError(input) {
+                if (!input) return;
+                input.classList.remove('invalid');
+                input.removeAttribute('aria-invalid');
+                input.removeAttribute('aria-describedby');
+                const errorElement = document.getElementById(input.id + 'Error');
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    errorElement.style.display = 'none';
+                }
             }
 
-
-            /**
-             * Validates a single input field.
-             * @param {HTMLInputElement|HTMLTextAreaElement} input - The input element.
-             * @returns {boolean} - True if valid, false otherwise.
-             */
             function validateInput(input) {
-                 if (!input) return false; // Added check
-                 clearError(input); // Clear previous errors first
-                 const value = input.value.trim();
-                 let isValid = true;
-                 let errorMessage = '';
+                if (!input) return false;
+                clearError(input);
+                const value = input.value.trim();
+                let isValid = true;
+                let errorMessage = '';
 
-                 // Basic required check
-                 if (input.required && value === '') {
-                      isValid = false;
-                      errorMessage = input.dataset.requiredError || 'This field is required.'; // Allow custom messages via data-*
-                 }
-
-                 // Email format check
-                 if (isValid && input.type === 'email' && value !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-                      isValid = false;
-                      errorMessage = input.dataset.emailError || 'Please enter a valid email address.';
-                 }
-
-                 if (!isValid) {
-                      showError(input, errorMessage);
-                 }
-                 return isValid;
+                if (input.required && value === '') {
+                    isValid = false;
+                    errorMessage = input.dataset.requiredError || 'This field is required.';
+                } else if (input.type === 'email' && value !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    isValid = false;
+                    errorMessage = input.dataset.emailError || 'Please enter a valid email address.';
+                }
+                if (!isValid) showError(input, errorMessage);
+                return isValid;
             }
 
-            // Add real-time validation on input (after first blur)
             allInputs.forEach(input => {
                 let blurredOnce = false;
                 input.addEventListener('blur', () => {
                     blurredOnce = true;
-                    validateInput(input)
-                }, { once: false }); // Keep listening on blur
-
+                    validateInput(input);
+                });
                 input.addEventListener('input', () => {
-                    if (blurredOnce) { // Only validate on input after first blur
-                        validateInput(input);
-                    }
+                    if (blurredOnce) validateInput(input);
                 });
             });
 
             form.addEventListener('submit', async (event) => {
-                event.preventDefault(); // Prevent default form submission
-
-                // Clear previous status messages and hide it
+                event.preventDefault();
                 formStatus.textContent = '';
                 formStatus.className = '';
                 formStatus.classList.remove('visible');
 
-
-                // Validate all fields on submit
                 let isFormValid = true;
-                // Validate in order, stopping focus on the first error
                 for (const input of allInputs) {
-                     if (!validateInput(input)) {
-                          isFormValid = false;
-                           // Focus the first invalid field and break
-                           input.focus();
-                           break;
-                     }
+                    if (!validateInput(input)) {
+                        isFormValid = false;
+                        input.focus();
+                        break;
+                    }
                 }
-
 
                 if (!isFormValid) {
                     formStatus.textContent = 'Please correct the errors above.';
-                    formStatus.className = 'error visible'; // Add visible class
-                    return; // Stop submission if validation fails
+                    formStatus.className = 'error visible';
+                    return;
                 }
 
-                // --- Submission Simulation ---
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
                 formStatus.textContent = 'Sending your message...';
-                formStatus.className = 'info visible'; // Show pending status
+                formStatus.className = 'info visible';
 
-
-                // Simulate network delay
                 await new Promise(resolve => setTimeout(resolve, 1500));
-
-                // *** IMPORTANT: Replace this simulation with actual form submission logic ***
-                // See previous comment block in separate file version for Fetch API example.
-                // Remember to handle success, server errors, and network errors properly.
-
-                // --- Simulation Result ---
-                const simulateSuccess = Math.random() > 0.1; // 90% chance of success simulation
+                const simulateSuccess = Math.random() > 0.1;
 
                 if (simulateSuccess) {
                     formStatus.textContent = 'Message sent successfully! Thank you. (Simulation)';
                     formStatus.className = 'success visible';
-                    form.reset(); // Clear the form
-                    // Clear any lingering error states visually
-                     allInputs.forEach(input => {
-                         clearError(input);
-                         // Reset blurred state if needed
-                         // Note: The blur listener setup above doesn't use a shared state,
-                         // so resetting isn't strictly necessary unless you change that logic.
-                     });
+                    form.reset();
+                    allInputs.forEach(clearError);
                 } else {
                     formStatus.textContent = 'Error sending message. Please try again later. (Simulation)';
                     formStatus.className = 'error visible';
@@ -2769,12 +2379,117 @@
 
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message';
-                // --- End Submission Simulation ---
-
             });
         }
 
-    </script>
+        function setupProjectModals() {
+            const projectModal = document.getElementById('projectModal');
+            const modalClose = projectModal.querySelector('.modal-close');
+            const modalImage = projectModal.querySelector('.modal-image');
+            const modalTitle = projectModal.querySelector('.modal-title');
+            const modalDescription = projectModal.querySelector('.modal-description');
+            const modalTags = projectModal.querySelector('.modal-tags');
+            const modalDemoLink = projectModal.querySelector('.modal-links .btn-secondary');
+            const modalCodeLink = projectModal.querySelector('.modal-links .btn-primary');
+            const projectCards = document.querySelectorAll('.project-card');
+            let lastFocusedElement;
 
+            function openProjectModal(projectData) {
+                lastFocusedElement = document.activeElement;
+                modalImage.src = projectData.image;
+                modalImage.alt = projectData.title + ' screenshot';
+                modalTitle.textContent = projectData.title;
+                modalDescription.textContent = projectData.description;
+                modalTags.innerHTML = '';
+                projectData.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.classList.add('modal-tag');
+                    tagElement.textContent = tag;
+                    modalTags.appendChild(tagElement);
+                });
+                modalDemoLink.href = projectData.demo;
+                modalCodeLink.href = projectData.code;
+                projectModal.classList.add('show');
+                projectModal.setAttribute('aria-hidden', 'false');
+                modalClose.focus();
+            }
+
+            function closeProjectModal() {
+                projectModal.classList.remove('show');
+                projectModal.setAttribute('aria-hidden', 'true');
+                if (lastFocusedElement) lastFocusedElement.focus();
+            }
+
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.getAttribute('data-title');
+                    const description = card.getAttribute('data-description');
+                    const image = card.getAttribute('data-image');
+                    const tags = card.getAttribute('data-tags').split(',');
+                    const demo = card.getAttribute('data-demo');
+                    const code = card.getAttribute('data-code');
+                    openProjectModal({ title, description, image, tags, demo, code });
+                });
+
+                card.querySelectorAll('.project-links .btn').forEach(link => {
+                    link.addEventListener('click', (event) => event.stopPropagation());
+                });
+            });
+
+            modalClose.addEventListener('click', closeProjectModal);
+            projectModal.addEventListener('click', (event) => {
+                if (event.target === projectModal) closeProjectModal();
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && projectModal.classList.contains('show')) closeProjectModal();
+            });
+        }
+
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                body.classList.add(savedTheme);
+                updateThemeIcon(savedTheme);
+            }
+
+            themeToggle.addEventListener('click', () => {
+                if (body.classList.contains('light-mode')) {
+                    body.classList.remove('light-mode');
+                    localStorage.setItem('theme', 'dark-mode');
+                    updateThemeIcon('dark-mode');
+                } else {
+                    body.classList.add('light-mode');
+                    localStorage.setItem('theme', 'light-mode');
+                    updateThemeIcon('light-mode');
+                }
+            });
+
+            function updateThemeIcon(theme) {
+                const icon = themeToggle.querySelector('i');
+                if (theme === 'light-mode') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+        }
+
+        function setupScrollProgress() {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            if (!scrollProgress) return;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.width = `${scrollPercentage}%`;
+            }, { passive: true });
+        }
+    </script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'934769cd39c2675b',t:'MTc0NTM0ODk0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
