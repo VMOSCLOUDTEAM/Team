@@ -1005,141 +1005,6 @@
 
         .modal-links .btn { flex: 1; }
 
-        .testimonials-section { background: var(--dark); }
-
-        .testimonials-slider {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: var(--space-md) 0 var(--space-3xl);
-            position: relative;
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: var(--space-md);
-            backface-visibility: hidden;
-            transform: translateZ(0);
-            -webkit-backface-visibility: hidden;
-            -webkit-transform: translateZ(0);
-        }
-
-        .testimonial-card {
-            background: var(--dark-medium);
-            border-radius: var(--rounded-xl);
-            padding: var(--space-xl) var(--space-lg);
-            border: 1px solid var(--border-color);
-            text-align: center;
-            width: 100%;
-            max-width: 600px;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-
-        .testimonial-author-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid var(--primary);
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            box-shadow: var(--shadow-md);
-            object-fit: cover;
-        }
-
-        .testimonial-content { padding-top: 50px; }
-
-        .testimonial-text {
-            font-size: var(--text-base);
-            color: var(--light-medium);
-            font-style: italic;
-            margin-bottom: var(--space-lg);
-            position: relative;
-            padding: 0 var(--space-lg);
-        }
-        .testimonial-text::before {
-            content: '“';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            font-size: var(--text-4xl);
-            color: var(--primary);
-            opacity: 0.3;
-        }
-
-        .testimonial-author { margin-top: var(--space-md); }
-
-        .testimonial-author h4 {
-            font-size: var(--text-lg);
-            margin-bottom: var(--space-xs);
-            color: var(--light);
-        }
-
-        .testimonial-author span {
-            font-size: var(--text-sm);
-            color: var(--muted);
-        }
-
-        .testimonial-quote {
-            position: absolute;
-            bottom: var(--space-md);
-            right: var(--space-lg);
-            font-size: var(--text-3xl);
-            color: var(--primary);
-            opacity: 0.2;
-        }
-
-        .swiper-button-prev, .swiper-button-next {
-            color: var(--primary) !important;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            width: 44px !important;
-            height: 44px !important;
-            transition: background-color 0.3s ease;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-        }
-        .swiper-button-prev:hover, .swiper-button-next:hover {
-            background-color: rgba(88, 101, 242, 0.3);
-        }
-        .swiper-button-prev::after, .swiper-button-next::after {
-            font-size: var(--text-lg) !important;
-        }
-
-        .swiper-button-prev { left: -10px !important; }
-        .swiper-button-next { right: -10px !important; }
-        @media (max-width: 900px) {
-            .swiper-button-prev { left: 5px !important; }
-            .swiper-button-next { right: 5px !important; }
-        }
-        @media (max-width: 500px) {
-            .swiper-button-prev, .swiper-button-next { display: none !important; }
-        }
-
-        .swiper-pagination {
-            position: static !important;
-            margin-top: var(--space-lg);
-        }
-        .swiper-pagination-bullet {
-            background: var(--muted) !important;
-            opacity: 0.7 !important;
-            transition: all 0.3s ease !important;
-            width: 10px !important;
-            height: 10px !important;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: var(--primary) !important;
-            opacity: 1 !important;
-            width: 16px !important;
-            border-radius: var(--rounded-full) !important;
-        }
-
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1488,9 +1353,6 @@
             .projects-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
             .filter-btn { font-size: var(--text-xs); padding: var(--space-xs) var(--space-md); }
             .project-filters { margin-bottom: var(--space-xl); }
-            .testimonial-card { padding: var(--space-lg) var(--space-md); }
-            .testimonial-author-img { width: 60px; height: 60px; }
-            .testimonial-content { padding-top: 35px; }
             .footer-links { gap: var(--space-md); }
             .social-links { gap: var(--space-md); }
             .contact-grid { padding: var(--space-md); gap: var(--space-lg); }
@@ -1510,6 +1372,99 @@
         }
 
         .hidden { display: none !important; }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            display: none;
+        }
+        .custom-cursor.active { display: block; }
+        .custom-cursor.hover {
+            transform: scale(1.5);
+            background: rgba(88, 101, 242, 0.1);
+        }
+
+        /* Image Gallery Lightbox */
+        .gallery-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-lightbox.active { display: flex; }
+        .gallery-image {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        .gallery-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 20px;
+        }
+        .gallery-prev { left: 20px; }
+        .gallery-next { right: 20px; }
+
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--dark-medium);
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid var(--border-color);
+        }
+        .music-controls button {
+            color: var(--light);
+            font-size: 20px;
+            padding: 5px;
+        }
+        .music-info {
+            color: var(--light);
+            font-size: 14px;
+        }
+        .music-progress {
+            width: 100px;
+            height: 4px;
+            background: var(--dark-muted);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .music-progress-bar {
+            height: 100%;
+            background: var(--primary);
+            width: 0;
+        }
     </style>
 </head>
 <body>
@@ -1524,6 +1479,29 @@
     <div class="background" aria-hidden="true"></div>
     <div class="overlay" aria-hidden="true"></div>
     <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <div id="customCursor" class="custom-cursor"></div>
+
+    <div id="galleryLightbox" class="gallery-lightbox">
+        <button class="gallery-close">&times;</button>
+        <button class="gallery-nav gallery-prev">&lt;</button>
+        <img src="" alt="" class="gallery-image">
+        <button class="gallery-nav gallery-next">&gt;</button>
+    </div>
+
+    <div class="music-player">
+        <div class="music-controls">
+            <button id="prevTrack"><i class="fas fa-backward"></i></button>
+            <button id="playPause"><i class="fas fa-play"></i></button>
+            <button id="nextTrack"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="music-info">
+            <div id="songTitle">No track playing</div>
+            <div class="music-progress">
+                <div class="music-progress-bar"></div>
+            </div>
+        </div>
+    </div>
 
     <header class="header" id="header">
         <div class="container">
@@ -1796,58 +1774,6 @@
             </div>
         </section>
 
-        <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll" id="testimonials-title">Client <span class="gradient-text">Testimonials</span></h2>
-                <div class="swiper testimonials-slider animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" role="group" aria-label="Testimonial 1 of 3">
-                            <figure class="testimonial-card">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Photo of John Smith" class="testimonial-author-img" loading="lazy">
-                                <figcaption class="testimonial-content">
-                                    <blockquote class="testimonial-text">"Kem delivered an exceptional website that exceeded our expectations. His attention to detail and creative approach made all the difference. Highly professional and easy to work with."</blockquote>
-                                    <div class="testimonial-author">
-                                        <h4>John Smith</h4>
-                                        <span>CEO, TechCorp</span>
-                                    </div>
-                                    <div class="testimonial-quote" aria-hidden="true"><i class="fas fa-quote-right"></i></div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="Testimonial 2 of 3">
-                            <figure class="testimonial-card">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Photo of Sarah Johnson" class="testimonial-author-img" loading="lazy">
-                                <figcaption class="testimonial-content">
-                                    <blockquote class="testimonial-text">"Working with Kem was a pleasure. He understood our vision perfectly and translated it into a beautiful, functional digital product. Communication was excellent throughout the project."</blockquote>
-                                    <div class="testimonial-author">
-                                        <h4>Sarah Johnson</h4>
-                                        <span>Marketing Director, BrandCo</span>
-                                    </div>
-                                    <div class="testimonial-quote" aria-hidden="true"><i class="fas fa-quote-right"></i></div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="swiper-slide" role="group" aria-label="Testimonial 3 of 3">
-                            <figure class="testimonial-card">
-                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Photo of Michael Chen" class="testimonial-author-img" loading="lazy">
-                                <figcaption class="testimonial-content">
-                                    <blockquote class="testimonial-text">"Kem's technical expertise and design sensibility are top-notch. The platform he built for us is robust, performant, and user-friendly. We couldn't be happier with the result."</blockquote>
-                                    <div class="testimonial-author">
-                                        <h4>Michael Chen</h4>
-                                        <span>CTO, StartupX</span>
-                                    </div>
-                                    <div class="testimonial-quote" aria-hidden="true"><i class="fas fa-quote-right"></i></div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination" role="tablist" aria-label="Testimonial Pagination"></div>
-                    <button class="swiper-button-prev" aria-label="Previous testimonial"></button>
-                    <button class="swiper-button-next" aria-label="Next testimonial"></button>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="contact" aria-labelledby="contact-title">
             <div class="container">
                 <h2 class="section-title animate-on-scroll" id="contact-title">Get In <span class="gradient-text">Touch</span></h2>
@@ -2007,12 +1933,14 @@
             runSafely(setupSmoothScrolling, 'Smooth Scrolling');
             runSafely(updateCopyrightYear, 'Copyright Year');
             runSafely(setupBackToTopButton, 'Back To Top Button');
-            runSafely(initializeTestimonialSlider, 'Testimonial Slider');
             runSafely(setupProjectFiltering, 'Project Filtering');
             runSafely(setupContactForm, 'Contact Form');
             runSafely(setupProjectModals, 'Project Modals');
             runSafely(setupThemeToggle, 'Theme Toggle');
             runSafely(setupScrollProgress, 'Scroll Progress');
+            runSafely(setupCustomCursor, 'Custom Cursor');
+            runSafely(setupGallery, 'Image Gallery');
+            runSafely(setupMusicPlayer, 'Music Player');
             console.log('Page functions initialization attempt complete.');
         }
 
@@ -2191,7 +2119,7 @@
 
         function updateCopyrightYear() {
             const yearElement = document.getElementById('current-year');
-            if (yearElement) yearElement.textContent = new Date().getFullYear();
+            if (yearElement) yearElement.textContent = new Date().getYear();
         }
 
         function setupBackToTopButton() {
@@ -2210,35 +2138,6 @@
 
             backToTopBtn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-
-        function initializeTestimonialSlider() {
-            if (typeof Swiper === 'undefined') {
-                console.error("Swiper library not loaded.");
-                const sliderContainer = document.querySelector('.testimonials-slider');
-                if (sliderContainer) {
-                    sliderContainer.querySelectorAll('.swiper-pagination, .swiper-button-prev, .swiper-button-next').forEach(el => el && (el.style.display = 'none'));
-                }
-                return;
-            }
-            const sliderElement = document.querySelector('.testimonials-slider');
-            if (!sliderElement) return;
-
-            new Swiper('.testimonials-slider', {
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 30,
-                grabCursor: true,
-                watchOverflow: true,
-                observer: true,
-                observeParents: true,
-                observeSlideChildren: true,
-                autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
-                pagination: { el: '.swiper-pagination', clickable: true, type: 'bullets' },
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                a11y: { enabled: true, prevSlideMessage: 'Previous testimonial', nextSlideMessage: 'Next testimonial', paginationBulletMessage: 'Go to testimonial {{index}}' },
-                keyboard: { enabled: true, onlyInViewport: false }
             });
         }
 
@@ -2488,6 +2387,110 @@
                 const scrollPercentage = (scrollTop / scrollHeight) * 100;
                 scrollProgress.style.width = `${scrollPercentage}%`;
             }, { passive: true });
+        }
+
+        // Custom Cursor
+        function setupCustomCursor() {
+            const cursor = document.getElementById('customCursor');
+            if (!cursor) return;
+
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            document.querySelectorAll('a, button').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+
+            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                cursor.classList.add('active');
+            }
+        }
+
+        // Image Gallery
+        function setupGallery() {
+            const lightbox = document.getElementById('galleryLightbox');
+            const lightboxImg = lightbox.querySelector('.gallery-image');
+            const images = document.querySelectorAll('.project-image');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                const image = images[index];
+                lightboxImg.src = image.src;
+                lightboxImg.alt = image.alt;
+                currentIndex = index;
+            }
+
+            images.forEach((img, index) => {
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showImage(index);
+                    lightbox.classList.add('active');
+                });
+            });
+
+            lightbox.querySelector('.gallery-close').addEventListener('click', () => {
+                lightbox.classList.remove('active');
+            });
+
+            lightbox.querySelector('.gallery-next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+
+            lightbox.querySelector('.gallery-prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            });
+        }
+
+        // Music Player
+        function setupMusicPlayer() {
+            const playlist = [
+                { title: 'Ambient Music 1', url: 'path/to/music1.mp3' },
+                { title: 'Ambient Music 2', url: 'path/to/music2.mp3' },
+                // Add more tracks
+            ];
+            let currentTrack = 0;
+            let isPlaying = false;
+            const audio = new Audio();
+            
+            const playPauseBtn = document.getElementById('playPause');
+            const prevBtn = document.getElementById('prevTrack');
+            const nextBtn = document.getElementById('nextTrack');
+            const titleDisplay = document.getElementById('songTitle');
+            const progressBar = document.querySelector('.music-progress-bar');
+
+            function updatePlayer() {
+                titleDisplay.textContent = playlist[currentTrack].title;
+                audio.src = playlist[currentTrack].url;
+                if (isPlaying) audio.play();
+            }
+
+            playPauseBtn.addEventListener('click', () => {
+                isPlaying = !isPlaying;
+                playPauseBtn.innerHTML = isPlaying ? 
+                    '<i class="fas fa-pause"></i>' : 
+                    '<i class="fas fa-play"></i>';
+                isPlaying ? audio.play() : audio.pause();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+                updatePlayer();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentTrack = (currentTrack + 1) % playlist.length;
+                updatePlayer();
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = `${progress}%`;
+            });
         }
     </script>
     <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'934769cd39c2675b',t:'MTc0NTM0ODk0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
